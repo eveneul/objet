@@ -1,0 +1,42 @@
+footer {
+  width: 100%;
+  background-color: #333;
+  color: #333;
+
+  .footer-inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    color: #fff;
+
+    > .title {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #fff;
+
+      > h1 {
+        float: left;
+        text-transform: uppercase;
+      }
+
+      .link {
+        float: right;
+
+        a {
+          display: block;
+          float: left;
+          padding: 10px 30px;
+          color: #fff;
+        }
+      }
+    }
+
+    .text {
+      address {
+        font-style: normal;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

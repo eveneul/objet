@@ -1,23 +1,16 @@
-const menuBtn = document.querySelector(".btn-menu");
-const menuMo = document.querySelector(".menu-mobile");
+const img = document.querySelectorAll(".gallery-img");
+const searchIcon = document.querySelector(".fa-magnifying-glass");
+const searchInput = document.querySelector(".search-input");
 
-menuBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  menuBtn.classList.toggle("on");
-  menuMo.classList.toggle("on");
+window.addEventListener("load", () => {
+  const iso = new Isotope(".con", {
+    itemSelector: ".gallery-img",
+    columnWidth: ".gallery-img",
+    transitionDurationL: "0.8s",
+    gutter: 0,
+  });
 });
 
-const swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-
-  loop: true,
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("on");
 });
