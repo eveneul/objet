@@ -27,10 +27,20 @@
         &::after {
           content: "";
           display: block;
-          width: 100%;
+          width: 0;
           height: 1px;
           background-color: #333;
           margin-top: 20px;
+          animation: ani cubic-bezier(0.55, 0, 0.46, 1.01) 2s forwards;
+        }
+
+        @keyframes ani {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 100%;
+          }
         }
       }
 
@@ -229,7 +239,6 @@
         }
       }
     }
-
     .btnIcons {
       width: 100%;
       position: absolute;
@@ -351,11 +360,11 @@
       ul {
         display: flex;
         li {
-          width: 30px;
+          width: 50px;
           height: 30px;
           text-align: center;
           line-height: 30px;
-          margin: 0 20px;
+          margin: 0 10px;
           transition: 0.3s;
 
           &:hover {
