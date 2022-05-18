@@ -11,22 +11,6 @@ window.addEventListener("load", () => {
   });
 });
 
-// searchIcon.addEventListener("click", () => {
-//   searchInput.classList.toggle("on");
-// });
-
-// const lis = document.querySelectorAll(".gnb ul li");
-
-// lis.forEach((el, index) => {
-//   el.addEventListener("mouseenter", () => {
-//     for (let idx of lis) {
-//       idx.classList.add("on");
-//     }
-
-//     el[index].classList.remove("on");
-//   });
-// });
-
 const categoryView = document.querySelector(".category .inner");
 const mouseCursor = document.querySelector(".cursor");
 
@@ -37,3 +21,47 @@ function cursor(e) {
   mouseCursor.style.left = e.pageX + "px";
   mouseCursor.style.top = e.pageY - scrollY + "px";
 }
+
+const mainViewSlider = document.querySelector(".mainGallery .inner .images");
+const mainViewSliderImg = mainViewSlider.querySelectorAll("img");
+const sliderPrevBtn = document.querySelector(".mainGallery .prev");
+const sliderNextBtn = document.querySelector(".mainGallery .next");
+
+mainViewSlider.prepend(mainViewSlider.lastElementChild);
+mainViewSlider.style.left = "-100%";
+
+sliderPrevBtn.addEventListener("click", () => {
+  new Anime(mainViewSlider, {
+    prop: "left",
+    value: "0%",
+    duration: 1000,
+    callback: () => {
+      new Anime(mainViewSlider, {
+        prop: "left",
+        value: "-100%",
+        duration: 0,
+        callback: () => {
+          mainViewSlider.prepend(mainViewSlider.lastElementChild);
+        },
+      });
+    },
+  });
+});
+
+sliderNextBtn.addEventListener("click", () => {
+  new Anime(mainViewSlider, {
+    prop: "left",
+    value: "-200%",
+    duration: 1000,
+    callback: () => {
+      new Anime(mainViewSlider, {
+        prop: "left",
+        value: "-100%",
+        duration: 0,
+        callback: () => {
+          mainViewSlider.append(mainViewSlider.firstElementChild);
+        },
+      });
+    },
+  });
+});
