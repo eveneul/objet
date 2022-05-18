@@ -1,0 +1,265 @@
+@media screen and (max-width: $tablet) {
+  header {
+    .inner {
+      width: 100%;
+
+      h1 {
+        left: 30px;
+      }
+
+      .gnb {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+
+    section {
+      width: 100%;
+
+      &.mainView {
+        height: 100vh;
+        .inner {
+          width: 90%;
+          height: 100%;
+
+          .text {
+            width: 40%;
+
+            h1 {
+              font-size: 70px;
+            }
+
+            h2 {
+              font-size: 20px;
+            }
+
+            p {
+              width: 90%;
+              font-size: 16px;
+              color: #777;
+              line-height: 1.4;
+              position: relative;
+            }
+          }
+
+          .more {
+            top: 500px;
+            left: 0px;
+
+            .more-img {
+              width: 50px;
+              height: 50px;
+
+              &:hover img {
+                filter: saturate(100%);
+              }
+            }
+            .more-text {
+              h3 {
+                font-size: 16px;
+              }
+              p {
+                font-size: 12px;
+
+                width: 60%;
+              }
+            }
+
+            .more-btn {
+              top: 120px;
+              left: -10px;
+
+              a {
+                padding: 15px 30px;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      &.newArrival {
+        .inner {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 20px;
+
+          > h1 {
+            font-size: 32px;
+          }
+
+          .wrap {
+            margin-top: 100px;
+            article {
+              width: calc(100% / 3 - 15px);
+
+              .text {
+                h2 {
+                  font-size: 22px;
+                }
+
+                p {
+                  font-size: 16px;
+                }
+
+                a {
+                  width: 120px;
+
+                  &:hover {
+                    background-color: #333;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.mainGallery {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .images {
+          width: 100%;
+          height: 100vh;
+
+          &::after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          img {
+            float: left;
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0);
+          }
+        }
+
+        .btns {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100vw;
+
+          button {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: transparent;
+            border: 1px solid #fff;
+            outline: none;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+
+            &.prev {
+              left: 50px;
+            }
+
+            &.next {
+              right: 50px;
+            }
+          }
+        }
+      }
+
+      &.category {
+        .inner {
+          width: 100%;
+
+          a {
+            .text {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+
+      &.review {
+        width: 100%;
+        height: 200vh;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    header {
+      .inner {
+        .gnb {
+          display: none;
+        }
+
+        .btn-menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 639px) {
+  footer {
+    .footer-inner {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+
+      color: #fff;
+
+      > .title {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        > h1 {
+          float: none;
+          text-transform: uppercase;
+          text-align-last: left;
+          margin-right: 20px;
+          font-size: 20px;
+        }
+
+        .link {
+          float: none;
+
+          a {
+            display: block;
+            float: left;
+            padding: 10px 20px 10px 0;
+            font-size: 14px;
+            margin: 0;
+          }
+        }
+      }
+
+      .text {
+        address {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}

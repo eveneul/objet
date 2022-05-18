@@ -6,6 +6,7 @@
 @import "./mainView";
 @import "./content-page";
 @import "./footer";
+@import "./mediaquery";
 
 * {
   margin: 0;
@@ -38,88 +39,4 @@ body {
     display: block;
     clear: both;
   }
-}
-
-@media screen and (max-width: $tablet) {
-  header {
-    .inner {
-      width: 100%;
-
-      h1 {
-        left: 30px;
-      }
-
-      .gnb {
-        margin-right: 30px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  header {
-    .inner {
-      .gnb {
-        display: none;
-      }
-
-      .btn-menu {
-        display: block;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 639px) {
-  footer {
-    .footer-inner {
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-
-      color: #fff;
-
-      > .title {
-        border-bottom: 1px solid #fff;
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-
-        > h1 {
-          float: none;
-          text-transform: uppercase;
-          text-align-last: left;
-          margin-right: 20px;
-          font-size: 20px;
-        }
-
-        .link {
-          float: none;
-
-          a {
-            display: block;
-            float: left;
-            padding: 10px 20px 10px 0;
-            font-size: 14px;
-            margin: 0;
-          }
-        }
-      }
-
-      .text {
-        address {
-          font-size: 12px;
-        }
-
-        p {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $mobile) {
 }
