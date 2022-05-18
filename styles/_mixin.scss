@@ -1,0 +1,5 @@
+@mixin floatAfter {
+  content: "";
+  display: block;
+  clear: both;
+}

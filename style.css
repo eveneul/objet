@@ -110,33 +110,225 @@ header {
       header .inner .menu-mobile.on {
         left: 0; }
 
-footer {
-  width: 100%;
-  background-color: #333;
-  color: #333; }
-  footer .footer-inner {
+main {
+  width: 100%; }
+  main section {
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 30px 20px;
-    color: #fff; }
-    footer .footer-inner > .title {
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #fff; }
-      footer .footer-inner > .title > h1 {
+    height: 100vh; }
+    main section.mainView .inner {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative; }
+      main section.mainView .inner::after {
+        content: "";
+        display: block;
+        clear: both; }
+      main section.mainView .inner .text {
         float: left;
-        text-transform: uppercase; }
-      footer .footer-inner > .title .link {
-        float: right; }
-        footer .footer-inner > .title .link a {
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2; }
+        main section.mainView .inner .text h1 {
+          font-size: 120px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          position: relative; }
+        main section.mainView .inner .text h2 {
+          font-size: 22px;
+          color: #333;
+          margin-bottom: 30px;
+          position: relative; }
+        main section.mainView .inner .text p {
+          width: 80%;
+          font-size: 16px;
+          color: #777;
+          line-height: 1.4;
+          position: relative; }
+      main section.mainView .inner .more {
+        position: absolute;
+        top: 60%;
+        left: 20px;
+        display: flex; }
+        main section.mainView .inner .more .more-img {
+          width: 80px;
+          height: 80px;
+          margin-right: 20px; }
+          main section.mainView .inner .more .more-img:hover img {
+            filter: saturate(100%); }
+          main section.mainView .inner .more .more-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: saturate(0);
+            transition: 0.5s; }
+        main section.mainView .inner .more .more-text {
+          display: flex;
+          flex-direction: column; }
+          main section.mainView .inner .more .more-text h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px; }
+          main section.mainView .inner .more .more-text p {
+            font-size: 14px;
+            color: #333;
+            width: 90%;
+            border-top: 1px solid #888;
+            padding-top: 10px; }
+        main section.mainView .inner .more .more-btn {
+          position: absolute;
+          top: 150px;
+          left: -30px;
+          border-radius: 100px;
+          border: 1px solid #333;
+          transition: 0.3s; }
+          main section.mainView .inner .more .more-btn a {
+            display: block;
+            padding: 20px 50px;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px; }
+          main section.mainView .inner .more .more-btn:hover {
+            background-color: #333; }
+            main section.mainView .inner .more .more-btn:hover a {
+              color: #fff; }
+      main section.mainView .inner .img {
+        width: 40%;
+        height: 100%;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1; }
+        main section.mainView .inner .img img {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          filter: saturate(0);
+          transition: 0.5s;
+          overflow: hidden; }
+          main section.mainView .inner .img img:nth-of-type(1) {
+            width: 90%;
+            top: 6%;
+            left: -50%; }
+          main section.mainView .inner .img img:nth-of-type(2) {
+            width: 80%;
+            top: 20%;
+            left: 30%; }
+          main section.mainView .inner .img img:hover {
+            filter: saturate(100%);
+            transform: scale(1.02); }
+    main section.mainGallery {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative; }
+      main section.mainGallery .images {
+        width: 500%;
+        height: 100vh; }
+        main section.mainGallery .images::after {
+          content: "";
           display: block;
+          clear: both; }
+        main section.mainGallery .images img {
           float: left;
-          padding: 10px 30px;
-          color: #fff; }
-    footer .footer-inner .text address {
-      font-style: normal;
-      margin-bottom: 10px; }
+          width: 100vw;
+          height: 100%;
+          object-fit: cover;
+          filter: saturate(0); }
+      main section.mainGallery .btns {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100vw; }
+        main section.mainGallery .btns button {
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          background-color: transparent;
+          border: 1px solid #fff;
+          outline: none;
+          border-radius: 50%;
+          font-size: 30px;
+          color: #fff;
+          cursor: pointer; }
+          main section.mainGallery .btns button.prev {
+            left: 50px; }
+          main section.mainGallery .btns button.next {
+            right: 50px; }
+    main section.category {
+      width: 100%;
+      height: 100vh;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      margin-top: -18px;
+      position: relative;
+      overflow: hidden; }
+      main section.category .inner {
+        width: 1180px;
+        height: 100vh;
+        margin: 0 auto;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333; }
+        main section.category .inner::after {
+          content: "";
+          display: block;
+          clear: both; }
+        main section.category .inner a {
+          display: block;
+          width: 25%;
+          height: calc(50vh - 1px);
+          float: left;
+          position: relative;
+          cursor: none; }
+          main section.category .inner a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0);
+            transition: 0.3s; }
+          main section.category .inner a .text {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #333;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: 0.3s; }
+          main section.category .inner a:nth-of-type(1) {
+            width: 50%;
+            height: calc(100vh - 2px); }
+          main section.category .inner a:hover img {
+            filter: saturate(100%); }
+          main section.category .inner a:hover .text {
+            display: flex; }
+      main section.category .cursor {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        font-size: 18px;
+        line-height: 80px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+        border-radius: 50%;
+        border: 1px solid #333;
+        z-index: 1000;
+        pointer-events: none;
+        transform: translateX(-50%); }
 
 .content {
   width: 100%;
@@ -163,10 +355,17 @@ footer {
         .content .inner > .title h1::after {
           content: "";
           display: block;
-          width: 100%;
+          width: 0;
           height: 1px;
           background-color: #333;
-          margin-top: 20px; }
+          margin-top: 20px;
+          animation: ani cubic-bezier(0.55, 0, 0.46, 1.01) 2s forwards; }
+
+@keyframes ani {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
       .content .inner > .title p {
         color: #333;
         font-size: 18px;
@@ -298,6 +497,10 @@ footer {
           width: 100%;
           filter: saturate(0);
           object-fit: cover; }
+      .content .inner > .con .terms textarea {
+        width: 100%;
+        height: 100px;
+        padding: 20px; }
     .content .inner .btnIcons {
       width: 100%;
       position: absolute;
@@ -381,11 +584,11 @@ footer {
       .content .inner .pagination ul {
         display: flex; }
         .content .inner .pagination ul li {
-          width: 30px;
+          width: 50px;
           height: 30px;
           text-align: center;
           line-height: 30px;
-          margin: 0 20px;
+          margin: 0 10px;
           transition: 0.3s; }
           .content .inner .pagination ul li:hover {
             background-color: #333; }
@@ -413,6 +616,34 @@ footer {
       .content .more-btn button:hover {
         background-color: #333;
         color: #fff; }
+
+footer {
+  width: 100%;
+  background-color: #333;
+  color: #333; }
+  footer .footer-inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    color: #fff; }
+    footer .footer-inner > .title {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #fff; }
+      footer .footer-inner > .title > h1 {
+        float: left;
+        text-transform: uppercase; }
+      footer .footer-inner > .title .link {
+        float: right; }
+        footer .footer-inner > .title .link a {
+          display: block;
+          float: left;
+          padding: 10px 30px;
+          color: #fff; }
+    footer .footer-inner .text address {
+      font-style: normal;
+      margin-bottom: 10px; }
 
 * {
   margin: 0;

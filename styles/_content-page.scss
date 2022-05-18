@@ -1,6 +1,7 @@
 .content {
   width: 100%;
   color: #333;
+
   > img {
     width: 100%;
     height: 300px;
@@ -53,6 +54,7 @@
 
     > .con {
       width: 100%;
+
       margin-bottom: 200px;
       margin: 0 auto;
       .con-title {
@@ -236,6 +238,14 @@
           width: 100%;
           filter: saturate(0);
           object-fit: cover;
+        }
+      }
+
+      .terms {
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 20px;
         }
       }
     }
