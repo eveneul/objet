@@ -22,6 +22,8 @@ function cursor(e) {
   mouseCursor.style.top = e.pageY - scrollY + "px";
 }
 
+//silder
+
 const mainViewSlider = document.querySelector(".mainGallery .inner .images");
 const mainViewSliderImg = mainViewSlider.querySelectorAll("img");
 const sliderPrevBtn = document.querySelector(".mainGallery .prev");
@@ -65,3 +67,90 @@ sliderNextBtn.addEventListener("click", () => {
     },
   });
 });
+
+// scroll event (main page)
+
+const sections = document.querySelectorAll("main section");
+const btns = document.querySelectorAll(".scrollBtns ul li");
+const moveTopBtn = document.querySelector(".moveTop");
+
+let sectionsTopArr = [];
+
+for (let section of sections) {
+  sectionsTopArr.push(section.offsetTop);
+}
+
+btns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    scrollAni(index);
+
+    for (let btnEl of btns) {
+      btnEl.classList.remove("on");
+    }
+    btns[index].classList.add("on");
+  });
+});
+
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+
+  if (scroll >= 100) {
+    moveTopBtn.style.opacity = 1;
+  } else if (scroll < 100) {
+    moveTopBtn.style.opacity = 0;
+  }
+
+  sections.forEach((section, index) => {
+    if (scroll + 100 >= sectionsTopArr[index]) {
+      for (let btn of btns) {
+        btn.classList.remove("on");
+      }
+      btns[index].classList.add("on");
+
+      for (let section of sections) {
+        section.classList.remove("on");
+      }
+      sections[index].classList.add("on");
+    }
+  });
+});
+
+moveTopBtn.addEventListener("click", () => {
+  new Anime(window, {
+    prop: "scroll",
+    value: 0,
+    duration: 300,
+  });
+});
+
+sections.forEach((section, index) => {
+  window.addEventListener(
+    "mousewheel",
+    (e) => {
+      e.preventDefault();
+
+      let sectionsArr = Array.from(sections);
+      let sectionOn = document.querySelector("section.on");
+      let sectionActive = sectionsArr.indexOf(sectionOn);
+
+      if (e.deltaY < 0) {
+        if (sectionActive == 0) {
+          return;
+        }
+        scrollAni(sectionActive - 1);
+      } else {
+        if (sectionActive == sectionsTopArr.length) return;
+        scrollAni(sectionActive + 1);
+      }
+    },
+    { passive: false }
+  );
+});
+
+function scrollAni(index) {
+  new Anime(window, {
+    prop: "scroll",
+    value: sectionsTopArr[index],
+    duration: 500,
+  });
+}
