@@ -731,7 +731,9 @@ main {
               color: #fff; }
         .content .inner .con .join .join-info table tr p {
           color: #ff6666;
-          font-size: 14px; }
+          font-size: 14px;
+          margin-top: 10px;
+          margin-left: 20px; }
     .content .inner .btnIcons {
       width: 100%;
       position: absolute;
