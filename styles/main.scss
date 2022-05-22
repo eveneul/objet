@@ -40,3 +40,12 @@ body {
     clear: both;
   }
 }
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: -999999px;
+  opacity: 0;
+  overflow: hidden;
+}
