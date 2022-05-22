@@ -25,7 +25,6 @@
   .inner {
     position: relative;
     width: 1180px;
-
     margin: 0 auto;
     padding: 40px 20px;
     border-left: 1px solid #333;
@@ -67,9 +66,9 @@
 
     .con {
       width: 100%;
-
       margin-bottom: 200px;
       margin: 0 auto;
+
       .con-title {
         font-size: 40px;
         text-transform: uppercase;
@@ -254,11 +253,182 @@
         }
       }
 
-      .terms {
-        textarea {
-          width: 100%;
-          height: 100px;
-          padding: 20px;
+      .join {
+        .order {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          margin-bottom: 100px;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 1px;
+            background-color: #333;
+            position: absolute;
+            top: 35%;
+            z-index: -2;
+          }
+
+          > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 200px;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:first-child {
+              .circle {
+                background-color: #333;
+                color: #fff;
+              }
+            }
+
+            .circle {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              border: 1px solid #333;
+              color: #333;
+              background-color: #fff;
+              margin-bottom: 20px;
+              line-height: 100px;
+              text-align: center;
+              font-size: 20px;
+              font-weight: bold;
+            }
+
+            > p {
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .join-terms {
+          margin-bottom: 100px;
+          textarea {
+            width: 100%;
+            height: 150px;
+            resize: none;
+            padding: 20px;
+            border: 1px solid #dcdcdc;
+            margin-bottom: 20px;
+          }
+
+          .checkbox {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            input {
+              margin-right: 20px;
+              width: 20px;
+              height: 20px;
+            }
+            label {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .join-info {
+          .con-title {
+            &::before {
+              width: 70%;
+            }
+          }
+
+          fieldset {
+            border: none;
+          }
+
+          table {
+            width: 100%;
+
+            tr {
+              th {
+                width: 30%;
+                text-transform: uppercase;
+                padding: 20px;
+              }
+
+              td {
+                [type="text"],
+                [type="password"] {
+                  padding: 20px 10px;
+                  width: 100%;
+                  border: none;
+                  border-bottom: 1px solid #dcdcdc;
+                }
+
+                [type="date"] {
+                  width: 40%;
+                  padding: 10px;
+                  border: none;
+                  border-bottom: 1px solid #dcdcdc;
+                }
+
+                input {
+                  margin-left: 20px;
+                }
+
+                label {
+                  text-transform: uppercase;
+                  margin-left: 20px;
+                }
+
+                textarea {
+                  width: 100%;
+                  height: 60px;
+                  padding: 20px;
+                  resize: none;
+                  border: none;
+                  border-bottom: 1px solid #dcdcdc;
+                }
+
+                input,
+                textarea {
+                  &:active,
+                  &:focus {
+                    outline: none;
+                  }
+                }
+              }
+              &:last-child {
+                td {
+                  width: 100%;
+                  padding: 20px;
+                  text-align: center;
+
+                  input {
+                    margin-top: 30px;
+                    margin-right: 20px;
+                    width: 150px;
+                    height: 40px;
+                    border: $border;
+                    background-color: #fff;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &:last-of-type {
+                      background-color: #333;
+                      color: #fff;
+                    }
+                  }
+                }
+              }
+
+              p {
+                color: #ff6666;
+                font-size: 14px;
+              }
+            }
+          }
         }
       }
     }
