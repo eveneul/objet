@@ -1,3 +1,13 @@
+// mobile hamburger btn
+
+const moblieMenuBtn = document.querySelector(".btn-menu");
+const mobileMenu = document.querySelector(".menu-mobile");
+
+moblieMenuBtn.addEventListener("click", () => {
+  moblieMenuBtn.classList.toggle("on");
+  mobileMenu.classList.toggle("on");
+});
+
 //Gallery page Isotope.js
 
 const img = document.querySelectorAll(".gallery-img");
