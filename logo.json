@@ -1,0 +1,44 @@
+{
+  "logoSrc": [
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/adidas.jpeg"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/arena.png"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/fuma.webp"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/new-balance.png"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/nike.jpeg"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/reebok.jpeg"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/speedo.png"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/stussy.png"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/under-armour.jpeg"
+    },
+    {
+      "pic": "./img/thumb.png",
+      "thumb": "./img/logo/vans.jpeg"
+    }
+  ]
+}

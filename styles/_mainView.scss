@@ -409,6 +409,32 @@ main {
         transform: translateX(-50%);
       }
     }
+
+    &.brands {
+      width: 100%;
+      overflow: hidden;
+      .brands-list {
+        overflow: hidden;
+        li {
+          a {
+            display: block;
+            float: left;
+            width: 240px;
+            height: 300px;
+            opacity: 0.3;
+            transition: 0.5s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+
+        a img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
