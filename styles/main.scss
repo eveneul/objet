@@ -4,7 +4,13 @@
 @import "./mixin";
 @import "./header";
 @import "./mainView";
-@import "./content-page";
+@import "./_sub-pages/content-page";
+@import "./_sub-pages/about";
+@import "./_sub-pages/faq";
+@import "./_sub-pages/join";
+@import "./_sub-pages/member";
+@import "./_sub-pages/youtube";
+@import "./_sub-pages/shop";
 @import "./footer";
 @import "./mediaquery";
 
