@@ -170,7 +170,7 @@ searchBtn.addEventListener("click", (e) => {
     const errMsgs = searchInput.parentElement.querySelectorAll("p");
     const url = `${base}method=${methodSearch}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&privacy_filter=1&tags=${tag}`;
 
-    if (errMsgs.length < 0) {
+    if (errMsgs.length > 0) {
       errMsgs[0].remove();
     }
 
@@ -181,7 +181,7 @@ searchBtn.addEventListener("click", (e) => {
 
     const errMsgs = searchInput.parentElement.querySelectorAll("p");
 
-    if (errMsgs.length < 0) {
+    if (errMsgs.length > 0) {
       errMsgs[0].remove();
     }
 
