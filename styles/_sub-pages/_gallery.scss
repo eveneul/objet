@@ -7,6 +7,7 @@
         position: absolute;
         bottom: 30px;
         right: 0;
+        transition: 0.5s;
 
         p {
           color: #ff6666;
@@ -220,6 +221,12 @@
 @media screen and (max-width: 500px) {
   .gallery {
     .inner {
+      .title {
+        .search-box {
+          bottom: -70px;
+        }
+      }
+
       .img-list {
         li {
           width: calc(100% / 2);
