@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GALLERY</title>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/dfb8a37dff.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/anime.js" defer></script>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./main.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="">
+    <header>
       <div class="inner">
         <h1>
           <a href="./index.html">
@@ -63,6 +63,11 @@
             <li>
               <a href="./location.html">
                 <h2>location</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./youtube.html">
+                <h2>youtube</h2>
               </a>
             </li>
             <li>
@@ -118,8 +123,8 @@
             </li>
 
             <li>
-              <a href="./shop.html">
-                <h2>shop</h2>
+              <a href="./youtube.html">
+                <h2>youtube</h2>
               </a>
             </li>
 
@@ -134,79 +139,29 @@
     </header>
 
     <div class="gallery content">
-      <img src="./img/gallery-img.jpg" />
+      <img src="./img/gallery-img.jpg" alt="gallery page image" />
       <h1>gallery</h1>
 
       <div class="inner">
         <div class="title">
           <h1>gallery</h1>
-        </div>
-
-        <div class="con gallery-wrap">
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img1.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img2.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img3.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img4.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img5.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img6.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img7.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img8.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img9.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img10.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img11.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img12.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img13.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img14.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img15.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img16.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img17.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img18.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img19.jpg" alt="" />
-          </div>
-          <div class="gallery-img">
-            <img src="./img/gallery/gallery-img20.jpg" alt="" />
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="검색어를 입력하세요"
+              class="search-input"
+            />
+            <button type="button" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
 
-        <div class="more-btn">
-          <button type="button">More</button>
+        <ul class="img-list"></ul>
+      </div>
+      <div id="loading">
+        <div class="bar-wrap">
+          <span></span>
         </div>
       </div>
     </div>
