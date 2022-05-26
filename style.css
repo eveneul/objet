@@ -6,32 +6,56 @@ header {
   text-transform: uppercase; }
   header .inner {
     width: 1180px;
-    height: 100%;
+    height: 100px;
     margin: 0 auto;
     position: relative; }
     header .inner h1 {
       position: absolute;
       top: 50%;
-      left: 0;
-      transform: translateY(-50%); }
+      left: 50%;
+      transform: translate(-50%, -50%); }
       header .inner h1 a p {
         font-size: 48px;
         color: #fff;
         text-shadow: -1px 0px #333, 0px 3px #333, 1px 0px #333, 0px -1px #333; }
     header .inner .gnb {
       position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      display: flex;
-      transition: 0.4s; }
-      header .inner .gnb ul:not(:nth-of-type(3)) {
-        margin-right: 200px; }
-      header .inner .gnb ul li {
-        position: relative; }
-        header .inner .gnb ul li a h2 {
-          font-size: 20px;
-          font-weight: 400; }
+      top: 40%;
+      width: 100%; }
+      header .inner .gnb > ul {
+        position: absolute; }
+        header .inner .gnb > ul > li {
+          position: relative;
+          float: left;
+          padding: 0 50px 30px;
+          cursor: pointer; }
+          header .inner .gnb > ul > li a h2 {
+            font-weight: normal; }
+          header .inner .gnb > ul > li .sub-menu {
+            position: absolute;
+            top: 60px;
+            overflow: hidden;
+            width: 150px;
+            height: 100px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #333;
+            border-top: none;
+            z-index: 2;
+            display: none;
+            transition: 0.5s; }
+            header .inner .gnb > ul > li .sub-menu ul li a {
+              color: #333; }
+              header .inner .gnb > ul > li .sub-menu ul li a:hover {
+                font-weight: bold; }
+            header .inner .gnb > ul > li .sub-menu ul li:nth-of-type(1) {
+              margin-bottom: 20px; }
+          header .inner .gnb > ul > li:hover a h2 {
+            font-weight: bold; }
+          header .inner .gnb > ul > li:hover .sub-menu {
+            display: block; }
+        header .inner .gnb > ul:nth-of-type(2) {
+          right: 0; }
     header .inner .btn-menu {
       position: absolute;
       top: 50%;
@@ -230,6 +254,7 @@ main {
               transform: scale(1.02); }
     main section.newArrival {
       width: 100%;
+      height: 100vh;
       padding: 80px 0;
       border-top: 1px solid #333;
       border-bottom: 1px solid #333; }
@@ -248,16 +273,16 @@ main {
             float: left;
             width: 380px;
             margin-right: 20px; }
+            main section.newArrival .inner .wrap article:hover .img img {
+              filter: saturate(100%); }
             main section.newArrival .inner .wrap article:nth-of-type(3) {
               margin-right: 0; }
             main section.newArrival .inner .wrap article .img img {
               width: 100%;
               height: 380px;
               object-fit: cover;
-              filter: saturate(0);
-              transition: 0.4s; }
-            main section.newArrival .inner .wrap article .img:hover img {
-              filter: saturate(100%); }
+              transition: 0.4s;
+              filter: saturate(0); }
             main section.newArrival .inner .wrap article .text {
               margin-top: 20px; }
               main section.newArrival .inner .wrap article .text h2 {
@@ -290,17 +315,16 @@ main {
       height: 100vh;
       overflow: hidden;
       position: relative; }
-      main section.mainGallery .images {
-        width: 500%;
+      main section.mainGallery .inner .images {
+        width: 100%;
         height: 100vh;
         position: absolute;
-        top: 0;
-        left: -100%; }
-        main section.mainGallery .images::after {
+        top: 0; }
+        main section.mainGallery .inner .images::after {
           content: "";
           display: block;
           clear: both; }
-        main section.mainGallery .images img {
+        main section.mainGallery .inner .images img {
           float: left;
           width: 100vw;
           height: 100%;
@@ -308,13 +332,11 @@ main {
           filter: saturate(0); }
       main section.mainGallery .btns {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100vw; }
+        top: 100px;
+        right: 50px; }
         main section.mainGallery .btns button {
-          position: absolute;
-          width: 120px;
-          height: 120px;
+          width: 80px;
+          height: 80px;
           background-color: transparent;
           border: 1px solid #fff;
           outline: none;
@@ -322,69 +344,45 @@ main {
           font-size: 30px;
           color: #fff;
           cursor: pointer; }
-          main section.mainGallery .btns button.prev {
-            left: 50px; }
-          main section.mainGallery .btns button.next {
-            right: 50px; }
+        main section.mainGallery .btns .prev {
+          margin-right: 50px; }
     main section.category {
       width: 100%;
       height: 100vh;
-      border-bottom: 1px solid #333;
       position: relative;
       overflow: hidden; }
       main section.category .inner {
-        width: 1180px;
-        height: 100vh;
-        margin: 0 auto;
-        border-left: 1px solid #333;
-        border-right: 1px solid #333; }
-        main section.category .inner::after {
-          content: "";
-          display: block;
-          clear: both; }
+        width: 100%; }
         main section.category .inner a {
-          display: block;
-          width: 25%;
-          height: calc(50vh - 1px);
+          width: 50%;
+          height: calc(100vh / 3);
           float: left;
           position: relative;
-          cursor: none; }
-          main section.category .inner a:nth-of-type(1) img {
-            border-right: 1px solid #333; }
-          main section.category .inner a:nth-of-type(2) img {
-            border-bottom: 1px solid #333;
-            border-right: 1px solid #333; }
-          main section.category .inner a:nth-of-type(3) img {
-            border-bottom: 1px solid #333; }
-          main section.category .inner a:nth-of-type(4) img {
-            border-right: 1px solid #333; }
+          overflow: hidden; }
           main section.category .inner a img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: saturate(0);
-            transition: 0.3s; }
+            transition: 0.5s; }
+            main section.category .inner a img:hover {
+              transform: scale(1.04); }
           main section.category .inner a .text {
-            width: 100%;
-            height: 100%;
             position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            color: #333;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.4);
-            transition: 0.3s; }
-          main section.category .inner a:nth-of-type(1) {
-            width: 50%;
-            height: calc(100vh - 2px); }
-          main section.category .inner a:hover img {
-            filter: saturate(100%); }
-          main section.category .inner a:hover .text {
-            display: flex; }
+            bottom: 20px;
+            left: 20px; }
+            main section.category .inner a .text p {
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: 18px; }
+          main section.category .inner a:nth-of-type(1), main section.category .inner a:nth-of-type(2) {
+            border-top: 1px solid #333; }
+          main section.category .inner a:nth-of-type(1), main section.category .inner a:nth-of-type(3) {
+            border-right: 1px solid #333; }
+          main section.category .inner a:nth-of-type(3), main section.category .inner a:nth-of-type(4) {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333; }
+          main section.category .inner a:nth-of-type(5) {
+            width: 100%; }
       main section.category .cursor {
         position: absolute;
         width: 80px;
@@ -399,6 +397,109 @@ main {
         z-index: 1000;
         pointer-events: none;
         transform: translateX(-50%); }
+    main section.main-join {
+      width: 100%;
+      height: 50vh;
+      position: relative;
+      overflow: hidden; }
+      main section.main-join a {
+        width: 100%; }
+        main section.main-join a img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(100%);
+          transition: 1s; }
+      main section.main-join:hover a img {
+        transform: scale(1.02); }
+      main section.main-join .inner {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        width: 1180px;
+        margin: 0 auto; }
+        main section.main-join .inner h1 {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 42px;
+          color: #fff;
+          margin-bottom: 20px;
+          transition: 0.4s; }
+        main section.main-join .inner a {
+          display: block;
+          width: 150px;
+          height: 40px;
+          background-color: #fff;
+          text-align: center;
+          line-height: 40px;
+          font-size: 18px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #333;
+          border-radius: 100px; }
+    main section.main-faq {
+      height: 50vh; }
+      main section.main-faq .inner {
+        width: 1180px;
+        margin: 40px auto; }
+        main section.main-faq .inner .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px; }
+          main section.main-faq .inner .title h1 {
+            font-size: 42px; }
+          main section.main-faq .inner .title a {
+            width: 100px;
+            height: 40px;
+            border: 1px solid #333;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            position: relative; }
+            main section.main-faq .inner .title a::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 0;
+              height: 100%;
+              background-color: #333;
+              transition: 0.4s;
+              color: #fff; }
+            main section.main-faq .inner .title a:hover {
+              color: #fff; }
+              main section.main-faq .inner .title a:hover::after {
+                content: "Click!";
+                width: 100%;
+                text-align: center;
+                color: #fff; }
+        main section.main-faq .inner table {
+          width: 100%;
+          border-collapse: collapse; }
+          main section.main-faq .inner table tr {
+            height: 60px; }
+            main section.main-faq .inner table tr th,
+            main section.main-faq .inner table tr td {
+              border-bottom: 1px solid #333;
+              padding: 10px; }
+            main section.main-faq .inner table tr td:nth-of-type(2) {
+              text-align: center; }
+            main section.main-faq .inner table tr:hover td {
+              background-color: #333; }
+              main section.main-faq .inner table tr:hover td a {
+                color: #fff; }
+    main section.location {
+      width: 100%;
+      height: 100vh;
+      background-color: #333; }
+      main section.location h1 {
+        font-size: 48px;
+        text-align: center;
+        line-height: 100vh;
+        text-transform: uppercase;
+        color: #fff; }
 
 .scrollBtns {
   position: fixed;
@@ -437,6 +538,357 @@ main {
     line-height: 50px; }
   .moveTop .on {
     opacity: 1; }
+
+@media screen and (max-width: 1179px) {
+  main {
+    width: 100%; }
+    main section {
+      width: 100%; }
+      main section.mainView {
+        width: 100%;
+        height: 100vh; }
+        main section.mainView .inner {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          main section.mainView .inner .text {
+            position: absolute;
+            width: 100%; }
+            main section.mainView .inner .text h1 {
+              font-size: 70px; }
+            main section.mainView .inner .text h2 {
+              font-size: 20px; }
+            main section.mainView .inner .text p {
+              width: 90%;
+              font-size: 16px;
+              color: #777;
+              line-height: 1.4;
+              position: relative; }
+          main section.mainView .inner .more {
+            top: 500px;
+            left: 0px; }
+            main section.mainView .inner .more .more-img {
+              width: 50px;
+              height: 50px; }
+              main section.mainView .inner .more .more-img:hover img {
+                filter: saturate(100%); }
+            main section.mainView .inner .more .more-text h3 {
+              font-size: 16px; }
+            main section.mainView .inner .more .more-text p {
+              font-size: 12px;
+              width: 60%; }
+            main section.mainView .inner .more .more-btn {
+              top: 120px;
+              left: -10px; }
+              main section.mainView .inner .more .more-btn a {
+                padding: 15px 30px;
+                font-size: 16px; }
+          main section.mainView .inner .img {
+            width: 100%;
+            height: 100%;
+            float: none;
+            position: relative;
+            z-index: 1; }
+            main section.mainView .inner .img img {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              filter: saturate(0);
+              transition: 0.5s; }
+              main section.mainView .inner .img img:nth-of-type(1) {
+                display: none; }
+              main section.mainView .inner .img img:nth-of-type(2) {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%; }
+              main section.mainView .inner .img img:hover {
+                filter: saturate(100%);
+                transform: none; }
+      main section.newArrival .inner {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px; }
+        main section.newArrival .inner > h1 {
+          font-size: 32px; }
+        main section.newArrival .inner .wrap {
+          margin-top: 100px; }
+          main section.newArrival .inner .wrap article {
+            width: calc(100% / 3 - 15px); }
+            main section.newArrival .inner .wrap article .text h2 {
+              font-size: 22px; }
+            main section.newArrival .inner .wrap article .text p {
+              font-size: 16px; }
+            main section.newArrival .inner .wrap article .text a {
+              width: 120px; }
+              main section.newArrival .inner .wrap article .text a:hover {
+                background-color: #333;
+                color: #fff; }
+      main section.mainGallery {
+        width: 100%;
+        overflow: hidden;
+        position: relative; }
+        main section.mainGallery .images {
+          width: 100%;
+          height: 100vh; }
+          main section.mainGallery .images::after {
+            content: "";
+            display: block;
+            clear: both; }
+          main section.mainGallery .images img {
+            float: left;
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0); }
+        main section.mainGallery .btns {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100vw; }
+          main section.mainGallery .btns button {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: transparent;
+            border: 1px solid #fff;
+            outline: none;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer; }
+            main section.mainGallery .btns button.prev {
+              left: 50px; }
+            main section.mainGallery .btns button.next {
+              right: 50px; }
+      main section.category .inner {
+        width: 100%; }
+        main section.category .inner a .text {
+          font-size: 26px; }
+      main section.review {
+        width: 100%;
+        height: 200vh; }
+        main section.review img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      main section.main-join {
+        height: 100vh; }
+        main section.main-join .inner {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          main section.main-join .inner h1 {
+            font-size: 52px;
+            text-align: center; }
+      main section.main-faq .inner {
+        width: 100%;
+        padding: 0 40px; }
+        main section.main-faq .inner table {
+          width: 100%;
+          border-collapse: collapse; }
+          main section.main-faq .inner table tr th {
+            font-size: 24px; }
+          main section.main-faq .inner table tr th:nth-of-type(2),
+          main section.main-faq .inner table tr td:nth-of-type(2) {
+            display: none; } }
+
+@media screen and (max-width: 539px) {
+  main {
+    width: 100%; }
+    main section {
+      width: 100%; }
+      main section.newArrival .inner {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px; }
+        main section.newArrival .inner > h1 {
+          font-size: 32px; }
+        main section.newArrival .inner .wrap {
+          margin-top: 100px; }
+          main section.newArrival .inner .wrap article {
+            width: calc(100% / 3 - 15px); }
+            main section.newArrival .inner .wrap article .text h2 {
+              font-size: 22px; }
+            main section.newArrival .inner .wrap article .text p {
+              font-size: 16px; }
+            main section.newArrival .inner .wrap article .text a {
+              width: 120px; }
+              main section.newArrival .inner .wrap article .text a:hover {
+                background-color: #333;
+                color: #fff; }
+      main section.mainGallery {
+        width: 100%;
+        overflow: hidden;
+        position: relative; }
+        main section.mainGallery .images {
+          width: 100%;
+          height: 100vh; }
+          main section.mainGallery .images::after {
+            content: "";
+            display: block;
+            clear: both; }
+          main section.mainGallery .images img {
+            float: left;
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0); }
+        main section.mainGallery .btns {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100vw; }
+          main section.mainGallery .btns button {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: transparent;
+            border: 1px solid #fff;
+            outline: none;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer; }
+            main section.mainGallery .btns button.prev {
+              left: 50px; }
+            main section.mainGallery .btns button.next {
+              right: 50px; }
+      main section.category .inner {
+        width: 100%; }
+        main section.category .inner a .text {
+          font-size: 26px; }
+      main section.review {
+        width: 100%;
+        height: 200vh; }
+        main section.review img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      main section.main-join {
+        height: 100vh; }
+        main section.main-join .inner {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          main section.main-join .inner h1 {
+            font-size: 52px;
+            text-align: center; }
+      main section.main-faq .inner {
+        width: 100%;
+        padding: 0 40px; }
+        main section.main-faq .inner table {
+          width: 100%;
+          border-collapse: collapse; }
+          main section.main-faq .inner table tr th {
+            font-size: 24px; }
+          main section.main-faq .inner table tr th:nth-of-type(2),
+          main section.main-faq .inner table tr td:nth-of-type(2) {
+            display: none; } }
+
+#cookie {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5; }
+  #cookie .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #333;
+    position: relative;
+    padding: 30px;
+    text-align: center; }
+    #cookie .content h1 {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    #cookie .content img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+      transform: translateX(-10px);
+      margin-bottom: 30px; }
+    #cookie .content p {
+      font-size: 14px;
+      margin-bottom: 40px; }
+    #cookie .content a {
+      background-color: #fff;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      font-weight: bold;
+      border-radius: 100px;
+      transition: 0.2s; }
+      #cookie .content a:hover {
+        background-color: #333;
+        color: #fff; }
+    #cookie .content .close ul li {
+      float: left;
+      position: absolute;
+      bottom: 0; }
+      #cookie .content .close ul li input {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px; }
+      #cookie .content .close ul li label {
+        font-size: 14px; }
+      #cookie .content .close ul li button {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        transform: translateY(-1px);
+        background-color: transparent;
+        border: none; }
+      #cookie .content .close ul li:nth-of-type(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-right: 1px solid #333;
+        border-top: 1px solid #333;
+        left: 0; }
+      #cookie .content .close ul li:nth-of-type(2) {
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-top: 1px solid #333;
+        right: 0; }
+
+#skipNavi {
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #skipNavi ul li {
+    position: absolute;
+    width: 200px;
+    padding: 20px 10px; }
+    #skipNavi ul li a {
+      color: #333;
+      font-weight: bold;
+      opacity: 0; }
+      #skipNavi ul li a.on {
+        opacity: 1; }
 
 .content {
   width: 100%;
@@ -915,7 +1367,8 @@ figure.pop {
   .gallery .inner .title .search-box {
     position: absolute;
     bottom: 30px;
-    right: 0; }
+    right: 0;
+    transition: 0.5s; }
     .gallery .inner .title .search-box p {
       color: #ff6666;
       font-size: 13px;
@@ -1043,6 +1496,36 @@ figure.pop {
       color: #fff;
       font-size: 32px; }
 
+@media screen and (max-width: 800px) {
+  .gallery .inner .img-list li {
+    width: calc(100% / 3); }
+    .gallery .inner .img-list li .img-con .img-author span {
+      font-size: 12px; }
+    .gallery .inner .img-list li .img-con .img-author p {
+      font-size: 8px;
+      margin: 3px 0; }
+    .gallery .inner .img-list li .img-con .img-author img {
+      width: 20px;
+      height: 20px; } }
+
+@media screen and (max-width: 500px) {
+  .gallery .inner .title .search-box {
+    bottom: -70px; }
+  .gallery .inner .img-list li {
+    width: calc(100% / 2); } }
+
+@media screen and (max-width: 539px) {
+  .gallery .inner .img-list li {
+    width: calc(100%); }
+    .gallery .inner .img-list li .img-con .img-author span {
+      font-size: 14px; }
+    .gallery .inner .img-list li .img-con .img-author p {
+      font-size: 18px;
+      margin: 12px 0; }
+    .gallery .inner .img-list li .img-con .img-author img {
+      width: 20px;
+      height: 20px; } }
+
 footer {
   width: 100%;
   background-color: #333;
@@ -1077,113 +1560,11 @@ footer {
       left: 30px; }
     header .inner .gnb {
       margin-right: 30px; }
-  main {
-    width: 100%; }
-    main section {
-      width: 100%; }
-      main section.mainView {
-        height: 100vh; }
-        main section.mainView .inner {
-          width: 90%;
-          height: 100%; }
-          main section.mainView .inner .text {
-            width: 40%; }
-            main section.mainView .inner .text h1 {
-              font-size: 70px; }
-            main section.mainView .inner .text h2 {
-              font-size: 20px; }
-            main section.mainView .inner .text p {
-              width: 90%;
-              font-size: 16px;
-              color: #777;
-              line-height: 1.4;
-              position: relative; }
-          main section.mainView .inner .more {
-            top: 500px;
-            left: 0px; }
-            main section.mainView .inner .more .more-img {
-              width: 50px;
-              height: 50px; }
-              main section.mainView .inner .more .more-img:hover img {
-                filter: saturate(100%); }
-            main section.mainView .inner .more .more-text h3 {
-              font-size: 16px; }
-            main section.mainView .inner .more .more-text p {
-              font-size: 12px;
-              width: 60%; }
-            main section.mainView .inner .more .more-btn {
-              top: 120px;
-              left: -10px; }
-              main section.mainView .inner .more .more-btn a {
-                padding: 15px 30px;
-                font-size: 16px; }
-      main section.newArrival .inner {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 20px; }
-        main section.newArrival .inner > h1 {
-          font-size: 32px; }
-        main section.newArrival .inner .wrap {
-          margin-top: 100px; }
-          main section.newArrival .inner .wrap article {
-            width: calc(100% / 3 - 15px); }
-            main section.newArrival .inner .wrap article .text h2 {
-              font-size: 22px; }
-            main section.newArrival .inner .wrap article .text p {
-              font-size: 16px; }
-            main section.newArrival .inner .wrap article .text a {
-              width: 120px; }
-              main section.newArrival .inner .wrap article .text a:hover {
-                background-color: #333;
-                color: #fff; }
-      main section.mainGallery {
-        width: 100%;
-        overflow: hidden;
-        position: relative; }
-        main section.mainGallery .images {
-          width: 100%;
-          height: 100vh; }
-          main section.mainGallery .images::after {
-            content: "";
-            display: block;
-            clear: both; }
-          main section.mainGallery .images img {
-            float: left;
-            width: 100vw;
-            height: 100%;
-            object-fit: cover;
-            filter: saturate(0); }
-        main section.mainGallery .btns {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100vw; }
-          main section.mainGallery .btns button {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background-color: transparent;
-            border: 1px solid #fff;
-            outline: none;
-            border-radius: 50%;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer; }
-            main section.mainGallery .btns button.prev {
-              left: 50px; }
-            main section.mainGallery .btns button.next {
-              right: 50px; }
-      main section.category .inner {
-        width: 100%; }
-        main section.category .inner a .text {
-          font-size: 26px; }
-      main section.review {
-        width: 100%;
-        height: 200vh; }
-        main section.review img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
+    header .inner .menu-mobile ul li {
+      padding: 10px 0;
+      margin-bottom: 10px; }
+      header .inner .menu-mobile ul li a {
+        font-size: 12px; }
   .content .inner {
     width: 100%; }
     .content .inner .title h1 {
