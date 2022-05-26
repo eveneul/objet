@@ -14,12 +14,52 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="anime.js" defer></script>
-    <script src="./main.js" defer></script>
-    <script src="./mainView.js" defer></script>
+    <script src="./js/anime.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/mainView.js" defer></script>
+    <script src="./js/mainGallery.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="skipNavi">
+      <ul>
+        <li>
+          <a href="#gnb">주 메뉴 바로가기</a>
+        </li>
+        <li>
+          <a href="#">메인페이지 콘텐츠 바로가기</a>
+        </li>
+        <li>
+          <a href="#footer">하단 메뉴 바로가기</a>
+        </li>
+      </ul>
+    </div>
+    <div id="cookie">
+      <div class="content">
+        <div class="con">
+          <h1>sale</h1>
+          <img src="./img/cookie.png" alt="cookie image" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eius!
+          </p>
+          <a href="#">View more</a>
+        </div>
+        <div class="close">
+          <ul>
+            <li>
+              <button type="button" class="dayCloseBtn">
+                오늘 하루 열지 않기
+              </button>
+            </li>
+            <li>
+              <button type="button" class="popupCloseBtn">닫기</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="inner">
         <h1>
@@ -29,55 +69,44 @@
         </h1>
 
         <div class="gnb">
-          <ul>
+          <ul class="gnbMenuGroup wrap">
             <li>
-              <a href="./index.html">
-                <h2>home</h2>
-              </a>
+              <a href="#"><h2>about</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./about.html">about us</a></li>
+                  <li><a href="./members.html">members</a></li>
+                </ul>
+              </div>
             </li>
             <li>
-              <a href="./about.html">
-                <h2>about us</h2>
-              </a>
-            </li>
-            <li>
-              <a href="./members.html">
-                <h2>members</h2>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="./shop.html">
-                <h2>shop</h2>
-              </a>
-            </li>
-            <li>
-              <a href="./gallery.html">
-                <h2>gallery</h2>
-              </a>
-            </li>
-            <li>
-              <a href="./faq.html">
-                <h2>faq</h2>
-              </a>
+              <a href="#"><h2>shop</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./shop.html">shop</a></li>
+                  <li><a href="./faq.html">faq</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
-          <ul>
+          <ul class="gnbMenuGroup">
             <li>
-              <a href="./location.html">
-                <h2>location</h2>
-              </a>
+              <a href="#"><h2>contect</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./join.html">join</a></li>
+                  <li><a href="./location.html">location</a></li>
+                </ul>
+              </div>
             </li>
             <li>
-              <a href="./youtube.html">
-                <h2>youtube</h2>
-              </a>
-            </li>
-            <li>
-              <a href="./join.html">
-                <h2>join</h2>
-              </a>
+              <a href="#"><h2>media</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./gallery.html">gallery</a></li>
+                  <li><a href="./youtube.html">youtube</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -178,6 +207,45 @@
         </div>
       </section>
 
+      <section class="category">
+        <div class="inner wrap">
+          <a href="#">
+            <img src="./img/top.jpeg" alt="store-top img" />
+            <div class="text">
+              <p>Top</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./img/pants.jpg" alt="store-pants img" />
+            <div class="text">
+              <p>Pants</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./img/shoes.jpg" alt="store-shoes img" />
+            <div class="text">
+              <p>Shoes</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./img/accessories.jpg" alt="store-accessories img" />
+            <div class="text">
+              <p>Accessories</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./img/all.jpg" alt="store-all img" />
+            <div class="text">
+              <p>All</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="cursor">
+          <span>More</span>
+        </div>
+      </section>
+
       <section class="newArrival">
         <div class="inner">
           <h1>new arrival</h1>
@@ -217,78 +285,93 @@
         </div>
       </section>
 
-      <section class="category">
-        <div class="inner">
-          <a href="#">
-            <img src="./img/all.jpg" alt="store-all img" />
-            <div class="text">
-              <p>All</p>
-            </div>
-          </a>
-          <a href="#">
-            <img src="./img/top.jpeg" alt="store-top img" />
-            <div class="text">
-              <p>Top</p>
-            </div>
-          </a>
-          <a href="#">
-            <img src="./img/pants.jpeg" alt="store-pants img" />
-            <div class="text">
-              <p>Pants</p>
-            </div>
-          </a>
-          <a href="#">
-            <img src="./img/shoes.jpeg" alt="store-shoes img" />
-            <div class="text">
-              <p>Shoes</p>
-            </div>
-          </a>
-          <a href="#">
-            <img src="./img/accessories.jpeg" alt="store-accessories img" />
-            <div class="text">
-              <p>Accessories</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="cursor">
-          <span>More</span>
+      <section class="mainGallery">
+        <div class="inner"></div>
+        <div class="btns">
+          <button type="button" class="prev"><</button>
+          <button type="button" class="next">></button>
         </div>
       </section>
 
-      <section class="mainGallery">
+      <section class="main-faq">
         <div class="inner">
-          <article class="images">
-            <img
-              src="./img/gallery/gallery-img1.jpg"
-              alt="main gallery image"
-            />
-            <img
-              src="./img/gallery/gallery-img2.jpg"
-              alt="main gallery image"
-            />
-            <img
-              src="./img/gallery/gallery-img3.jpg"
-              alt="main gallery image"
-            />
-            <img
-              src="./img/gallery/gallery-img4.jpg"
-              alt="main gallery image"
-            />
-            <img
-              src="./img/gallery/gallery-img5.jpg"
-              alt="main gallery image"
-            />
-          </article>
-          <div class="btns">
-            <button type="button" class="prev"><</button>
-            <button type="button" class="next">></button>
+          <div class="title">
+            <h1>FAQ</h1>
+            <a href="./faq.html">More</a>
           </div>
+          <table>
+            <tr>
+              <th>TITLE</th>
+              <th>DATE</th>
+            </tr>
+            <tr>
+              <td>
+                <a href="./faq.html"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae, molestiae.</a
+                >
+              </td>
+              <td><a href="./faq.html">2022. 05.</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="./faq.html"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae, molestiae.</a
+                >
+              </td>
+              <td><a href="./faq.html">2022. 05.</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="./faq.html"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae, molestiae.</a
+                >
+              </td>
+              <td><a href="./faq.html">2022. 05.</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="./faq.html"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae, molestiae.</a
+                >
+              </td>
+              <td><a href="./faq.html">2022. 05.</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="./faq.html"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae, molestiae.</a
+                >
+              </td>
+              <td><a href="./faq.html">2022. 05.</a></td>
+            </tr>
+          </table>
         </div>
+      </section>
+
+      <section class="main-join">
+        <a href="./join.html">
+          <img src="./img/gallery-img.jpg" />
+        </a>
+        <div class="inner">
+          <h1>
+            your member <br />
+            highlights
+          </h1>
+          <a href="#">join us</a>
+        </div>
+      </section>
+
+      <section class="location">
+        <h1>location content..</h1>
       </section>
     </main>
 
-    <footer>
+    <footer id="footer">
       <div class="footer-inner">
         <div class="title wrap">
           <h1>objet</h1>
@@ -314,6 +397,8 @@
     <div class="scrollBtns">
       <ul>
         <li class="on"></li>
+        <li></li>
+        <li></li>
         <li></li>
         <li></li>
         <li></li>
