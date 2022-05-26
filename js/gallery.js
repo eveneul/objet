@@ -71,7 +71,7 @@ function imgLoading() {
   thumb.forEach((img) => {
     img.onload = () => {
       count++;
-      loadBar.style.width = count * 2 + "%";
+      loadBar.style.width = count * 5 + "%";
 
       if (count == len) iso();
 
