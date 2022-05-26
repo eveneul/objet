@@ -8,19 +8,37 @@ moblieMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("on");
 });
 
-//Gallery page Isotope.js
+// cookie
 
-const img = document.querySelectorAll(".gallery-img");
-const searchIcon = document.querySelector(".search-icon");
-const searchInput = document.querySelector(".search-input");
+// header tab focus
 
-window.addEventListener("load", () => {
-  const iso = new Isotope(".gallery-wrap", {
-    itemSelector: ".gallery-img",
-    columnWidth: ".gallery-img",
-    transitionDurationL: "0.8s",
-    gutter: 0,
+const gnbList = document.querySelectorAll(".gnbMenuGroup > li");
+
+gnbList.forEach((list) => {
+  list.addEventListener("mouseenter", (e) => {
+    const sub = e.currentTarget.querySelector(".sub-menu");
+    sub.style.display = "block";
+  });
+
+  list.addEventListener("mouseleave", (e) => {
+    const sub = e.currentTarget.querySelector(".sub-menu");
+    sub.style.display = "none";
+  });
+
+  list.addEventListener("focusin", (e) => {
+    const sub = e.currentTarget.querySelector(".sub-menu");
+    sub.style.display = "block";
+  });
+
+  const subLi = list.querySelector(".sub-menu ul");
+  const subLiLast = subLi.lastElementChild;
+
+  list.addEventListener("focusout", (e) => {
+    const sub = e.currentTarget.querySelector(".sub-menu");
+    if (subLiLast == e.target.closest("li")) {
+      sub.style.display = "none";
+    } else {
+      sub.style.display = "block";
+    }
   });
 });
-
-// join form validation
