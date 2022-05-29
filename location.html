@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOCATION</title>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b4aec3e6c21e0e365e584fd6ae9917e3"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/dfb8a37dff.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/location.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <h1>
+          <a href="./index.html">
+            <p>objet</p>
+          </a>
+        </h1>
+
+        <div class="gnb">
+          <ul class="gnbMenuGroup wrap">
+            <li>
+              <a href="#"><h2>about</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./about.html">about us</a></li>
+                  <li><a href="./members.html">members</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><h2>shop</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./shop.html">shop</a></li>
+                  <li><a href="./faq.html">faq</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="gnbMenuGroup">
+            <li>
+              <a href="#"><h2>contect</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./join.html">join</a></li>
+                  <li><a href="./location.html">location</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><h2>media</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./gallery.html">gallery</a></li>
+                  <li><a href="./youtube.html">youtube</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-menu">
+          <span>매뉴 호출</span>
+        </div>
+
+        <div class="menu-mobile">
+          <h1>objet</h1>
+          <ul>
+            <li>
+              <a href="./index.html">
+                <h2>home</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./shop.html">
+                <h2>shop</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./about.html">
+                <h2>about us</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./members.html">
+                <h2>members</h2>
+              </a>
+            </li>
+
+            <li>
+              <a href="./gallery.html">
+                <h2>gallery</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./faq.html">
+                <h2>faq</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./location.html">
+                <h2>location</h2>
+              </a>
+            </li>
+
+            <li>
+              <a href="./youtube.html">
+                <h2>youtube</h2>
+              </a>
+            </li>
+
+            <li>
+              <a href="./join.html">
+                <h2>join</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="location content">
+      <img src="./img/join-img.jpg" alt="join page image" />
+      <h1>location</h1>
+
+      <div class="inner">
+        <div class="title">
+          <h1>location</h1>
+        </div>
+        <div class="con">
+          <div class="gangnam-store store">
+            <div id="map-gangnam" class="map"></div>
+            <div class="location-con">
+              <h2>Gangnam Store</h2>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>서울특별시 강남구 강남대로 396</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>02-123-1234</p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ipsam, suscipit.Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Ipsam, suscipit.Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Ipsam, suscipit.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hongdae-store store">
+            <div id="map-hongdae" class="map"></div>
+            <div class="location-con">
+              <h2>Hongdae Store</h2>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>서울특별시 마포구 양화로 160 홍대입구역</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>02-123-1234</p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ipsam, suscipit.Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Ipsam, suscipit.Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Ipsam, suscipit.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nowon-store store">
+            <div id="map-nowon" class="map"></div>
+            <div class="location-con">
+              <h2>Nowon Store</h2>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>서울특별시 노원구 상계로 69-1</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>02-123-1234</p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ipsam, suscipit.Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Ipsam, suscipit.Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Ipsam, suscipit.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="title wrap">
+          <h1>objet</h1>
+          <div class="link wrap">
+            <a href="#">Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Customer</a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+
+        <div class="text">
+          <address>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+            nihil!
+          </address>
+
+          <p>Copyright &copy; Lorem ipsum dolor sit.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

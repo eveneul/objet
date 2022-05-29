@@ -157,7 +157,6 @@ function moveScroll(index) {
 
 const popup = document.querySelector("#cookie");
 const popupClose = document.querySelector(".popupCloseBtn");
-console.log(popupClose);
 const daypopClose = document.querySelector(".dayCloseBtn");
 
 const isCookie = document.cookie.indexOf("objet=close");
@@ -202,4 +201,56 @@ for (let el of skipNavi) {
   el.addEventListener("focusout", (e) => {
     el.classList.remove("on");
   });
+}
+
+// location
+
+const locationTabs = document.querySelectorAll(".location-menu li");
+const locationMap = document.querySelectorAll(".location-map-list li");
+
+locationTabs.forEach((el, index) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    locationOn(locationTabs, index);
+    locationOn(locationMap, index);
+  });
+});
+
+function locationOn(arr, index) {
+  for (let el of arr) {
+    el.classList.remove("on");
+  }
+
+  arr[index].classList.add("on");
+}
+
+var gangnam = document.getElementById("gangnam");
+var options = {
+  center: new kakao.maps.LatLng(37.49797742928841, 127.02751396250248),
+  draggable: false,
+  level: 3,
+};
+
+var map = new kakao.maps.Map(gangnam, options); //지도 생성 및 객체 리턴
+
+var hongdae = document.getElementById("hongdae");
+var options = {
+  center: new kakao.maps.LatLng(37.55604537240584, 126.92299340788084),
+  draggable: false,
+  level: 3,
+};
+
+var map = new kakao.maps.Map(hongdae, options); //지도 생성 및 객체 리턴
+
+var nowon = document.getElementById("nowon");
+var options = {
+  center: new kakao.maps.LatLng(37.654666083609655, 127.06048089676263),
+  draggable: false,
+  level: 3,
+};
+
+var map = new kakao.maps.Map(nowon, options); //지도 생성 및 객체 리턴
+
+function setDraggable(draggable) {
+  gangnam.setDraggable(draggable);
 }
