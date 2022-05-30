@@ -139,123 +139,66 @@ main {
   main section {
     width: 100%; }
     main section.mainView {
+      width: 100%;
       height: 100vh;
-      margin-bottom: 100px; }
-      main section.mainView .inner {
-        width: 80%;
-        height: 100%;
-        margin: 0 auto;
-        position: relative; }
-        main section.mainView .inner::after {
-          content: "";
-          display: block;
-          clear: both; }
-        main section.mainView .inner .text {
-          float: left;
-          position: absolute;
-          top: 100px;
-          left: 0%;
-          width: 60%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          z-index: 2; }
-          main section.mainView .inner .text h1 {
-            font-size: 120px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            position: relative; }
-          main section.mainView .inner .text h2 {
-            font-size: 22px;
-            color: #333;
-            margin-bottom: 30px;
-            position: relative; }
-          main section.mainView .inner .text p {
-            width: 80%;
-            font-size: 16px;
-            color: #777;
-            line-height: 1.4;
-            position: relative; }
-        main section.mainView .inner .more {
-          position: absolute;
-          top: 500px;
-          left: 20px;
-          display: flex;
-          z-index: 2; }
-          main section.mainView .inner .more .more-img {
-            width: 80px;
-            height: 80px;
-            margin-right: 20px; }
-            main section.mainView .inner .more .more-img:hover img {
-              filter: saturate(100%); }
-            main section.mainView .inner .more .more-img img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 50%;
-              filter: saturate(0);
-              transition: 0.5s; }
-          main section.mainView .inner .more .more-text {
-            display: flex;
-            flex-direction: column; }
-            main section.mainView .inner .more .more-text h3 {
-              font-size: 16px;
-              text-transform: uppercase;
-              margin-bottom: 10px; }
-            main section.mainView .inner .more .more-text p {
-              font-size: 14px;
-              color: #333;
-              width: 90%;
-              border-top: 1px solid #888;
-              padding-top: 10px; }
-          main section.mainView .inner .more .more-btn {
-            position: absolute;
-            top: 150px;
-            left: -30px;
-            border-radius: 100px;
-            border: 1px solid #333;
-            transition: 0.3s; }
-            main section.mainView .inner .more .more-btn a {
-              display: block;
-              padding: 20px 50px;
-              color: #333;
-              font-weight: bold;
-              font-size: 18px; }
-            main section.mainView .inner .more .more-btn:hover {
-              background-color: #333; }
-              main section.mainView .inner .more .more-btn:hover a {
-                color: #fff; }
-        main section.mainView .inner .img {
-          width: 40%;
+      position: relative;
+      overflow: hidden; }
+      main section.mainView .img {
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        width: 50%;
+        height: auto; }
+        main section.mainView .img img {
+          width: 100%;
           height: 100%;
-          float: right;
-          position: absolute;
-          top: 0;
-          right: 0;
-          z-index: 1; }
-          main section.mainView .inner .img img {
-            position: absolute;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            filter: saturate(0);
-            transition: 0.5s;
-            overflow: hidden; }
-            main section.mainView .inner .img img:nth-of-type(1) {
-              width: 90%;
-              top: 6%;
-              left: -50%; }
-            main section.mainView .inner .img img:nth-of-type(2) {
-              width: 80%;
-              top: 20%;
-              left: 30%; }
-            main section.mainView .inner .img img:hover {
-              filter: saturate(100%);
-              transform: scale(1.02); }
+          object-fit: cover;
+          filter: grayscale(95%); }
+      main section.mainView .text {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 600px; }
+        main section.mainView .text h1 {
+          font-weight: bold;
+          font-size: 112px;
+          color: #fff;
+          text-shadow: -1px 0px #333, 0px 3px #333, 1px 0px #333, 0px -1px #333;
+          margin-bottom: 10px; }
+        main section.mainView .text h2 {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 32px;
+          margin-bottom: 10px; }
+        main section.mainView .text p {
+          letter-spacing: -0.03em;
+          font-size: 18px;
+          line-height: 1.4;
+          width: 500px;
+          margin-bottom: 60px; }
+        main section.mainView .text a {
+          display: block;
+          width: 200px;
+          height: 60px;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 12px;
+          border: 1px solid #333;
+          text-align: center;
+          line-height: 60px;
+          color: #333;
+          transition: 0.4s; }
+          main section.mainView .text a:hover {
+            background-color: #333;
+            color: #fff; }
     main section.newArrival {
       width: 100%;
       height: 100vh;
-      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       border-top: 1px solid #333;
       border-bottom: 1px solid #333; }
       main section.newArrival .inner {
@@ -268,7 +211,7 @@ main {
           color: #333;
           text-align: center; }
         main section.newArrival .inner .wrap {
-          margin-top: 100px; }
+          margin-top: 50px; }
           main section.newArrival .inner .wrap article {
             float: left;
             width: 380px;
@@ -441,7 +384,7 @@ main {
       height: 50vh; }
       main section.main-faq .inner {
         width: 1180px;
-        margin: 40px auto; }
+        margin: 0 auto; }
         main section.main-faq .inner .title {
           display: flex;
           justify-content: space-between;
@@ -592,84 +535,71 @@ main {
       width: 100%; }
       main section.mainView {
         width: 100%;
-        height: 100vh; }
-        main section.mainView .inner {
-          position: relative;
-          width: 100%;
-          height: 100%; }
-          main section.mainView .inner .text {
-            position: absolute;
-            width: 100%; }
-            main section.mainView .inner .text h1 {
-              font-size: 70px; }
-            main section.mainView .inner .text h2 {
-              font-size: 20px; }
-            main section.mainView .inner .text p {
-              width: 90%;
-              font-size: 16px;
-              color: #777;
-              line-height: 1.4;
-              position: relative; }
-          main section.mainView .inner .more {
-            top: 500px;
-            left: 0px; }
-            main section.mainView .inner .more .more-img {
-              width: 50px;
-              height: 50px; }
-              main section.mainView .inner .more .more-img:hover img {
-                filter: saturate(100%); }
-            main section.mainView .inner .more .more-text h3 {
-              font-size: 16px; }
-            main section.mainView .inner .more .more-text p {
-              font-size: 12px;
-              width: 60%; }
-            main section.mainView .inner .more .more-btn {
-              top: 120px;
-              left: -10px; }
-              main section.mainView .inner .more .more-btn a {
-                padding: 15px 30px;
-                font-size: 16px; }
-          main section.mainView .inner .img {
+        height: 100vh;
+        position: relative; }
+        main section.mainView .img {
+          position: absolute;
+          top: 5px;
+          right: 0px;
+          left: 0;
+          width: 1180px; }
+          main section.mainView .img img {
             width: 100%;
             height: 100%;
-            float: none;
-            position: relative;
-            z-index: 1; }
-            main section.mainView .inner .img img {
-              width: 100%;
-              height: auto;
-              object-fit: cover;
-              filter: saturate(0);
-              transition: 0.5s; }
-              main section.mainView .inner .img img:nth-of-type(1) {
-                display: none; }
-              main section.mainView .inner .img img:nth-of-type(2) {
-                position: relative;
-                top: 0;
-                left: 0;
-                width: 100%; }
-              main section.mainView .inner .img img:hover {
-                filter: saturate(100%);
-                transform: none; }
-      main section.newArrival .inner {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 20px; }
-        main section.newArrival .inner > h1 {
-          font-size: 32px; }
-        main section.newArrival .inner .wrap {
-          margin-top: 100px; }
-          main section.newArrival .inner .wrap article {
-            width: calc(100% / 3 - 15px); }
-            main section.newArrival .inner .wrap article .text h2 {
-              font-size: 22px; }
-            main section.newArrival .inner .wrap article .text p {
-              font-size: 16px; }
-            main section.newArrival .inner .wrap article .text a {
-              width: 120px; }
-              main section.newArrival .inner .wrap article .text a:hover {
-                background-color: #333;
-                color: #fff; }
+            object-fit: cover;
+            filter: grayscale(95%); }
+        main section.mainView .text {
+          top: 70%; }
+          main section.mainView .text h1 {
+            font-size: 72px; }
+          main section.mainView .text h2 {
+            display: inline-block;
+            font-size: 18px;
+            background-color: #fff; }
+          main section.mainView .text p {
+            font-size: 14px;
+            line-height: 1;
+            width: 300px;
+            color: #fff;
+            margin-bottom: 0; }
+          main section.mainView .text a {
+            margin-top: 20px;
+            width: 300px;
+            height: 40px;
+            font-size: 12px;
+            border: 1px solid #fff;
+            color: #fff;
+            line-height: 40px; }
+            main section.mainView .text a:hover {
+              background-color: #fff;
+              color: #333; }
+      main section.newArrival {
+        padding: 70px 10px; }
+        main section.newArrival .inner {
+          width: 100%;
+          margin: 0 auto; }
+          main section.newArrival .inner > h1 {
+            font-size: 38px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            text-align: center; }
+          main section.newArrival .inner .wrap {
+            display: flex;
+            justify-content: space-around; }
+            main section.newArrival .inner .wrap article {
+              float: left;
+              width: 280px; }
+              main section.newArrival .inner .wrap article .img img {
+                width: 100%;
+                height: 280px; }
+              main section.newArrival .inner .wrap article .text h2 {
+                font-size: 22px; }
+              main section.newArrival .inner .wrap article .text p {
+                font-size: 16px; }
+              main section.newArrival .inner .wrap article .text a {
+                width: 100%;
+                font-size: 14px; }
       main section.mainGallery {
         width: 100%;
         overflow: hidden;
@@ -687,37 +617,15 @@ main {
             height: 100%;
             object-fit: cover;
             filter: saturate(0); }
-        main section.mainGallery .btns {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100vw; }
-          main section.mainGallery .btns button {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background-color: transparent;
-            border: 1px solid #fff;
-            outline: none;
-            border-radius: 50%;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer; }
-            main section.mainGallery .btns button.prev {
-              left: 50px; }
-            main section.mainGallery .btns button.next {
-              right: 50px; }
+        main section.mainGallery .btns button {
+          width: 60px;
+          height: 60px; }
+        main section.mainGallery .btns .prev {
+          margin-right: 20px; }
       main section.category .inner {
         width: 100%; }
         main section.category .inner a .text {
           font-size: 26px; }
-      main section.review {
-        width: 100%;
-        height: 200vh; }
-        main section.review img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
       main section.main-join {
         height: 100vh; }
         main section.main-join .inner {
@@ -731,18 +639,7 @@ main {
           align-items: center; }
           main section.main-join .inner h1 {
             font-size: 52px;
-            text-align: center; }
-      main section.main-faq .inner {
-        width: 100%;
-        padding: 0 40px; }
-        main section.main-faq .inner table {
-          width: 100%;
-          border-collapse: collapse; }
-          main section.main-faq .inner table tr th {
-            font-size: 24px; }
-          main section.main-faq .inner table tr th:nth-of-type(2),
-          main section.main-faq .inner table tr td:nth-of-type(2) {
-            display: none; } }
+            text-align: center; } }
 
 @media screen and (max-width: 539px) {
   main {
@@ -1641,127 +1538,69 @@ footer {
 @media screen and (max-width: 1179px) {
   header .inner {
     width: 100%; }
-    header .inner h1 {
-      left: 30px; }
-    header .inner .gnb {
-      margin-right: 30px; }
-    header .inner .menu-mobile ul li {
-      padding: 10px 0;
-      margin-bottom: 10px; }
-      header .inner .menu-mobile ul li a {
-        font-size: 12px; }
-  .content .inner {
-    width: 100%; }
-    .content .inner .title h1 {
-      font-size: 4vmax; }
-    .content .inner .con .con-title {
-      font-size: 3vmax; }
-      .content .inner .con .con-title::before {
-        width: 50%; }
-    .content .inner .con .about-identity > .title {
-      width: 20%; }
-    .content .inner .con .about-identity > .text {
-      width: 80%;
-      margin-bottom: 30px; }
-    .content .inner .con .about-identity > .img {
-      width: 100%; }
-      .content .inner .con .about-identity > .img img {
-        width: 100%;
-        height: 400px; }
-    .content .inner .con .about-history .history-circle {
+    header .inner h1 a p {
+      font-size: 32px; }
+    header .inner .gnb > ul > li {
+      padding: 0 60px 30px; }
+      header .inner .gnb > ul > li a h2 {
+        font-size: 18px; }
+    header .inner .btn-menu {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      color: #333;
       display: none; }
-    .content .inner .con .about-history > ul > li {
-      text-align: left;
-      transform: none; }
-      .content .inner .con .about-history > ul > li > ul li div strong {
-        order: -1; }
-      .content .inner .con .about-history > ul > li:nth-of-type(2) {
-        transform: none; }
-    .content .inner .con .member {
-      width: calc(50% - 20px);
-      margin-right: 20px; }
-      .content .inner .con .member:nth-of-type(3), .content .inner .con .member:nth-of-type(6) {
-        margin-right: 20px; }
-      .content .inner .con .member:nth-of-type(even) {
-        margin-right: 0; }
-      .content .inner .con .member h2 {
-        font-size: 36px; }
-      .content .inner .con .member img {
+      header .inner .btn-menu::before {
+        content: "";
+        display: block;
         width: 100%;
-        height: 500px; }
-      .content .inner .con .member address {
-        font-size: 16px; }
-    .content .inner .con .join .order {
-      display: none; }
-    .content .inner .con .join .join-terms .checkbox input {
-      margin-right: 10px;
-      width: 17px;
-      height: 17px; }
-    .content .inner .con .join .join-terms .checkbox label {
-      font-size: 14px; }
-    .content .inner .con .join .join-info .con-title::before {
-      width: 20%; }
-    .content .inner .con .join .join-info table tr {
-      display: flex;
-      flex-direction: column; }
-      .content .inner .con .join .join-info table tr th {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 10px;
-        padding-left: 0; }
-      .content .inner .con .join .join-info table tr td {
-        width: 100%;
-        margin-bottom: 40px; }
-        .content .inner .con .join .join-info table tr td [type="date"] {
-          width: 100%; }
-        .content .inner .con .join .join-info table tr td input {
-          margin-left: 0px;
-          margin-right: 0px; }
-        .content .inner .con .join .join-info table tr td label {
-          text-transform: uppercase;
-          margin-right: 20px;
-          margin-left: 5px; }
-      .content .inner .con .join .join-info table tr:last-child td {
-        width: 100%;
-        padding: 20px;
-        text-align: center; }
-        .content .inner .con .join .join-info table tr:last-child td input {
-          margin-top: 30px;
-          margin-right: 20px;
-          width: 150px;
-          height: 40px;
-          border: 1px solid #333;
-          background-color: #fff;
-          line-height: 40px;
-          text-transform: uppercase;
-          font-size: 16px;
-          cursor: pointer; }
-          .content .inner .con .join .join-info table tr:last-child td input:last-of-type {
-            background-color: #333;
-            color: #fff; }
-      .content .inner .con .join .join-info table tr p {
-        color: #ff6666;
-        font-size: 14px;
-        margin-top: 10px;
-        margin-left: 20px; }
-    .content .inner .btnIcons {
-      top: 150px;
-      transition: 0.5s; }
-    .content .inner .faq-board table tr td:nth-of-type(3) {
-      width: 70%;
-      font-size: 15px; }
-    .content .inner .faq-board table tr th:nth-of-type(1), .content .inner .faq-board table tr th:nth-of-type(2),
-    .content .inner .faq-board table tr td:nth-of-type(1),
-    .content .inner .faq-board table tr td:nth-of-type(2) {
-      display: none; }
-    .content .inner .pagination {
-      width: 100%; }
-      .content .inner .pagination > a:hover {
+        height: 2px;
         background-color: #333;
-        color: #fff; }
-      .content .inner .pagination ul li {
-        width: 30px;
-        margin: 3px; } }
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 0.5s, transform 0.5s 0.5s; }
+      header .inner .btn-menu::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: bottom 0.5s, transform 0.5s 0.5s; }
+      header .inner .btn-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        text-indent: -9999px;
+        transition: 0.5s; }
+      header .inner .btn-menu.on::before {
+        top: 50%;
+        transform: rotate(45deg);
+        margin-top: -1px; }
+      header .inner .btn-menu.on::after {
+        bottom: 50%;
+        transform: rotate(-45deg);
+        margin-bottom: -1px; }
+      header .inner .btn-menu.on span {
+        transform: translateX(100%);
+        opacity: 0; }
+    header .inner .menu-mobile > h1 {
+      left: 120px;
+      font-size: 32px;
+      margin-bottom: 30px; }
+    header .inner .menu-mobile ul li {
+      margin-bottom: 20px;
+      padding-bottom: 20px; } }
 
 @media screen and (max-width: 900px) {
   header .inner .gnb {

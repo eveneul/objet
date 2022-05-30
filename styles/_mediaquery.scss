@@ -4,263 +4,102 @@
       width: 100%;
 
       h1 {
-        left: 30px;
+        a {
+          p {
+            font-size: 32px;
+          }
+        }
       }
 
       .gnb {
-        margin-right: 30px;
+        > ul {
+          > li {
+            padding: 0 60px 30px;
+
+            a h2 {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .btn-menu {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        color: #333;
+        display: none;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #333;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: top 0.5s, transform 0.5s 0.5s;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #333;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: bottom 0.5s, transform 0.5s 0.5s;
+        }
+
+        span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #333;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+          text-indent: -9999px;
+          transition: 0.5s;
+        }
+
+        &.on {
+          &::before {
+            top: 50%;
+            transform: rotate(45deg);
+            margin-top: -1px;
+          }
+
+          &::after {
+            bottom: 50%;
+            transform: rotate(-45deg);
+            margin-bottom: -1px;
+          }
+
+          span {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
       }
 
       .menu-mobile {
-        ul li {
-          padding: 10px 0;
-          margin-bottom: 10px;
-          a {
-            font-size: 12px;
-          }
-        }
-      }
-    }
-  }
-
-  .content {
-    .inner {
-      width: 100%;
-
-      .title {
-        h1 {
-          font-size: 4vmax;
-        }
-      }
-
-      .con {
-        .con-title {
-          font-size: 3vmax;
-
-          &::before {
-            width: 50%;
-          }
-        }
-
-        .about-identity {
-          > .title {
-            width: 20%;
-          }
-
-          > .text {
-            width: 80%;
-            margin-bottom: 30px;
-          }
-
-          > .img {
-            width: 100%;
-
-            img {
-              width: 100%;
-              height: 400px;
-            }
-          }
-        }
-
-        .about-history {
-          .history-circle {
-            display: none;
-          }
-
-          > ul {
-            > li {
-              text-align: left;
-              transform: none;
-
-              > ul {
-                li {
-                  div {
-                    strong {
-                      order: -1;
-                    }
-                  }
-                }
-              }
-
-              &:nth-of-type(2) {
-                transform: none;
-              }
-            }
-          }
-        }
-
-        .member {
-          width: calc(50% - 20px);
-
-          margin-right: 20px;
-          &:nth-of-type(3),
-          &:nth-of-type(6) {
-            margin-right: 20px;
-          }
-          &:nth-of-type(even) {
-            margin-right: 0;
-          }
-
-          h2 {
-            font-size: 36px;
-          }
-
-          img {
-            width: 100%;
-            height: 500px;
-          }
-
-          address {
-            font-size: 16px;
-          }
-        }
-
-        // .gallery-img {
-        //   width: 20%;
-        //   padding: 0 5px;
-        //   img {
-        //     width: 100%;
-        //     filter: saturate(0);
-        //     object-fit: cover;
-        //   }
-        // }
-
-        .join {
-          .order {
-            display: none;
-          }
-
-          .join-terms {
-            .checkbox {
-              input {
-                margin-right: 10px;
-                width: 17px;
-                height: 17px;
-              }
-              label {
-                font-size: 14px;
-              }
-            }
-          }
-
-          .join-info {
-            .con-title {
-              &::before {
-                width: 20%;
-              }
-            }
-
-            table {
-              tr {
-                display: flex;
-                flex-direction: column;
-                th {
-                  width: 100%;
-                  text-align: left;
-                  margin-bottom: 10px;
-                  padding-left: 0;
-                }
-
-                td {
-                  width: 100%;
-                  margin-bottom: 40px;
-
-                  [type="date"] {
-                    width: 100%;
-                  }
-
-                  input {
-                    margin-left: 0px;
-                    margin-right: 0px;
-                  }
-
-                  label {
-                    text-transform: uppercase;
-                    margin-right: 20px;
-                    margin-left: 5px;
-                  }
-
-                  [type="checkbox"] {
-                  }
-                }
-                &:last-child {
-                  td {
-                    width: 100%;
-                    padding: 20px;
-                    text-align: center;
-
-                    input {
-                      margin-top: 30px;
-                      margin-right: 20px;
-                      width: 150px;
-                      height: 40px;
-                      border: $border;
-                      background-color: #fff;
-                      line-height: 40px;
-                      text-transform: uppercase;
-                      font-size: 16px;
-                      cursor: pointer;
-
-                      &:last-of-type {
-                        background-color: #333;
-                        color: #fff;
-                      }
-                    }
-                  }
-                }
-
-                p {
-                  color: #ff6666;
-                  font-size: 14px;
-                  margin-top: 10px;
-                  margin-left: 20px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .btnIcons {
-        top: 150px;
-        transition: 0.5s;
-      }
-
-      .faq-board {
-        table {
-          tr {
-            td {
-              &:nth-of-type(3) {
-                width: 70%;
-                font-size: 15px;
-              }
-            }
-
-            th,
-            td {
-              &:nth-of-type(1),
-              &:nth-of-type(2) {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-
-      .pagination {
-        width: 100%;
-
-        > a {
-          &:hover {
-            background-color: #333;
-            color: #fff;
-          }
+        > h1 {
+          left: 120px;
+          font-size: 32px;
+          margin-bottom: 30px;
         }
 
         ul {
           li {
-            width: 30px;
-            margin: 3px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
           }
         }
       }
