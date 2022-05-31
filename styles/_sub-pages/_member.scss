@@ -35,3 +35,39 @@
     line-height: 1.5;
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .member {
+    width: calc(100% / 2 - 10px);
+    margin-right: 0px;
+    &:nth-of-type(odd) {
+      margin-right: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    address {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .member {
+    margin-right: 0;
+
+    &:nth-of-type(odd) {
+      margin-right: 0px;
+    }
+
+    img {
+      height: 300px;
+    }
+
+    address {
+      font-size: 16px;
+    }
+  }
+}
