@@ -1,55 +1,133 @@
-.location .con {
-  width: 100%;
+.location {
+  .inner {
+    .con {
+      width: 100%;
 
-  .store {
-    width: 100%;
+      .store {
+        width: 100%;
 
-    margin-bottom: 100px;
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    .map {
-      float: left;
-      width: 60%;
-      height: 400px;
-      background-color: yellow;
-      margin-right: 2%;
-    }
-
-    .location-con {
-      float: right;
-      width: 38%;
-      margin: 20px 0;
-
-      h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-        color: #333;
-      }
-
-      li {
-        border-bottom: 1px solid #dcdcdc;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-
-        &:last-child {
-          border: none;
-        }
+        margin-bottom: 100px;
         &::after {
           content: "";
           display: block;
           clear: both;
         }
-        i {
+
+        .map {
           float: left;
-          margin-right: 20px;
+          width: 60%;
+          height: 400px;
+          background-color: yellow;
+          margin-right: 2%;
         }
 
-        p {
-          color: #333;
+        .location-con {
+          float: right;
+          width: 38%;
+          margin: 20px 0;
+
+          h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+          }
+
+          li {
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            &:last-child {
+              border: none;
+            }
+            &::after {
+              content: "";
+              display: block;
+              clear: both;
+            }
+            i {
+              float: left;
+              margin-right: 20px;
+            }
+
+            p {
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .location {
+    .inner {
+      width: 100%;
+      .con {
+        .store {
+          margin-bottom: 80px;
+
+          .map {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+
+          .location-con {
+            width: 100%;
+            margin: 0;
+
+            h2 {
+              font-size: 6vmax;
+              margin-bottom: 20px;
+            }
+
+            li {
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .location {
+    .inner {
+      .title {
+        h1 {
+          font-size: 42px;
+        }
+      }
+      .con {
+        .store {
+          margin-bottom: 40px;
+
+          .location-con {
+            width: 100%;
+            margin: 0;
+
+            h2 {
+              font-size: 22px;
+              margin-bottom: 20px;
+            }
+
+            li {
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
         }
       }
     }

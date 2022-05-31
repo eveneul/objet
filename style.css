@@ -864,7 +864,8 @@ main {
       .content .inner > .title h1 {
         text-transform: uppercase;
         font-size: 64px;
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        transition: 0.4s; }
         .content .inner > .title h1::after {
           content: "";
           display: block;
@@ -1196,34 +1197,58 @@ main {
     line-height: 1.5; }
 
 .video-content.con {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
-  flex-wrap: wrap; }
+  width: 100%; }
+  .video-content.con::after {
+    content: "";
+    display: block;
+    clear: both; }
   .video-content.con article {
-    width: 48%;
-    height: 400px;
-    margin-bottom: 50px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .video-content.con article .pic {
-      display: block;
+    width: calc(100% / 2 - 10px);
+    height: 300px;
+    margin-bottom: 20px;
+    float: left;
+    position: relative;
+    overflow: hidden; }
+    .video-content.con article:nth-of-type(odd) {
+      margin-right: 20px; }
+    .video-content.con article .vid {
       width: 100%;
       height: 60%; }
-      .video-content.con article .pic > img {
+      .video-content.con article .vid > img {
         width: 100%;
         height: 100%;
-        object-fit: cover; }
-    .video-content.con article .vid-con h2 {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 1.2;
-      color: #333;
-      margin-top: 20px;
-      text-align: center; }
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: 0.5s; }
+    .video-content.con article .vid-con {
+      position: absolute;
+      top: -100%;
+      left: 10px;
+      width: 100%;
+      transition: 0.4s; }
+      .video-content.con article .vid-con h2 {
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff; }
+    .video-content.con article .vid-playIcon div {
+      position: absolute;
+      bottom: -100px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      text-align: center;
+      transition: 0.5s; }
+      .video-content.con article .vid-playIcon div i {
+        font-size: 18px;
+        line-height: 50px; }
+    .video-content.con article:hover .vid img {
+      filter: none; }
+    .video-content.con article:hover .vid-con {
+      top: 10px; }
+    .video-content.con article:hover .vid-playIcon div {
+      bottom: 10px; }
 
 figure.pop {
   width: 100%;
@@ -1244,6 +1269,18 @@ figure.pop {
     color: #fff;
     font-weight: bold;
     cursor: pointer; }
+
+@media screen and (max-width: 1179px) {
+  .youtube .inner {
+    width: 100%; }
+    .youtube .inner .title h1 {
+      font-size: 42px; }
+    .youtube .inner .video-content.con article {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 40px; }
+      .youtube .inner .video-content.con article:nth-of-type(odd) {
+        margin-right: 0px; } }
 
 .shop .shop-menu {
   margin-bottom: 100px; }
@@ -1469,44 +1506,82 @@ figure.pop {
       width: 20px;
       height: 20px; } }
 
-.location .con {
+.location .inner .con {
   width: 100%; }
-  .location .con .store {
+  .location .inner .con .store {
     width: 100%;
     margin-bottom: 100px; }
-    .location .con .store::after {
+    .location .inner .con .store::after {
       content: "";
       display: block;
       clear: both; }
-    .location .con .store .map {
+    .location .inner .con .store .map {
       float: left;
       width: 60%;
       height: 400px;
       background-color: yellow;
       margin-right: 2%; }
-    .location .con .store .location-con {
+    .location .inner .con .store .location-con {
       float: right;
       width: 38%;
       margin: 20px 0; }
-      .location .con .store .location-con h2 {
+      .location .inner .con .store .location-con h2 {
         font-size: 32px;
         margin-bottom: 40px;
         color: #333; }
-      .location .con .store .location-con li {
+      .location .inner .con .store .location-con li {
         border-bottom: 1px solid #dcdcdc;
         padding-bottom: 30px;
         margin-bottom: 30px; }
-        .location .con .store .location-con li:last-child {
+        .location .inner .con .store .location-con li:last-child {
           border: none; }
-        .location .con .store .location-con li::after {
+        .location .inner .con .store .location-con li::after {
           content: "";
           display: block;
           clear: both; }
-        .location .con .store .location-con li i {
+        .location .inner .con .store .location-con li i {
           float: left;
           margin-right: 20px; }
-        .location .con .store .location-con li p {
+        .location .inner .con .store .location-con li p {
           color: #333; }
+
+@media screen and (max-width: 1179px) {
+  .location .inner {
+    width: 100%; }
+    .location .inner .con .store {
+      margin-bottom: 80px; }
+      .location .inner .con .store .map {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; }
+      .location .inner .con .store .location-con {
+        width: 100%;
+        margin: 0; }
+        .location .inner .con .store .location-con h2 {
+          font-size: 6vmax;
+          margin-bottom: 20px; }
+        .location .inner .con .store .location-con li {
+          padding-bottom: 20px;
+          margin-bottom: 20px; }
+          .location .inner .con .store .location-con li p {
+            font-size: 14px; } }
+
+@media screen and (max-width: 539px) {
+  .location .inner .title h1 {
+    font-size: 42px; }
+  .location .inner .con .store {
+    margin-bottom: 40px; }
+    .location .inner .con .store .location-con {
+      width: 100%;
+      margin: 0; }
+      .location .inner .con .store .location-con h2 {
+        font-size: 22px;
+        margin-bottom: 20px; }
+      .location .inner .con .store .location-con li {
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+        .location .inner .con .store .location-con li p {
+          font-size: 14px; } }
 
 footer {
   width: 100%;
