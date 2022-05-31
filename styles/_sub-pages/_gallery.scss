@@ -188,6 +188,12 @@
   }
 }
 
+@media screen and (max-width: $tablet) {
+  .gallery .inner {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .gallery {
     .inner {
