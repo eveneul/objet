@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YOUTUBE</title>
-    <script src="./js/youtube.js" defer></script>
+    <script src="./js/youtube-prototype.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script>
+      window.addEventListener("load", () => {
+        new Youtube(".con", {
+          api_key: "AIzaSyAc8uCAQs_3ZURzIg-VEZxbaTOW1TlqLlw",
+          playListId: "PLUzA4Nj5MAHHx5opxtILa4cL_UNqlRHsj",
+          num: 6,
+        });
+      });
+    </script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -29,7 +40,12 @@
               </div>
             </li>
             <li>
-              <a href="./faq.html"><h2>faq</h2></a>
+              <a href="#"><h2>faq</h2></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="./faq.html">faq</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
           <ul class="gnbMenuGroup">
