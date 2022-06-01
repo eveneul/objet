@@ -904,6 +904,34 @@ main {
           top: 50%;
           right: 0; }
 
+@media screen and (max-width: 1179px) {
+  .content > h1 {
+    font-size: 48px; }
+  .content .inner {
+    width: 100%; }
+    .content .inner > .title {
+      margin-bottom: 100px; }
+      .content .inner > .title h1 {
+        font-size: 48px; }
+      .content .inner > .title p {
+        font-size: 16px; }
+    .content .inner .con .con-title {
+      font-size: 28px; }
+      .content .inner .con .con-title::before {
+        width: 40%; } }
+
+@media screen and (max-width: 539px) {
+  .content > h1 {
+    font-size: 36px; }
+  .content .inner > .title {
+    margin-bottom: 100px; }
+    .content .inner > .title h1 {
+      font-size: 28px; }
+    .content .inner > .title p {
+      font-size: 12px; }
+  .content .inner .con .con-title {
+    font-size: 28px; } }
+
 .about-identity {
   width: 100%;
   margin-bottom: 30px;
@@ -913,13 +941,16 @@ main {
     border-bottom: none; }
   .about-identity > .title {
     float: left;
-    width: 30%; }
+    width: 30%;
+    transition: 0.5s; }
   .about-identity > .text {
     float: left;
-    width: 35%; }
+    width: 35%;
+    transition: 0.5s; }
   .about-identity > .img {
     float: right;
-    width: 35%; }
+    width: 35%;
+    transition: 0.5s; }
     .about-identity > .img img {
       width: 400px;
       height: 200px;
@@ -982,6 +1013,67 @@ main {
         background-color: #333;
         margin: 20px 0; }
 
+@media screen and (max-width: 1179px) {
+  .about-identity > .title {
+    width: 100%;
+    margin-bottom: 20px; }
+  .about-identity > .text {
+    width: 100%;
+    margin-bottom: 20px; }
+  .about-identity > .img {
+    width: 100%; }
+    .about-identity > .img img {
+      width: 100%;
+      height: 300px; }
+  .about-history {
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .about-history .history-circle {
+      display: none; }
+    .about-history > ul > li {
+      text-align: left;
+      transform: none;
+      margin-bottom: 100px; }
+      .about-history > ul > li > ul li {
+        flex-direction: row; }
+        .about-history > ul > li > ul li div {
+          display: flex;
+          align-items: center; }
+          .about-history > ul > li > ul li div strong {
+            order: 0;
+            margin: 0;
+            margin-right: 10px;
+            font-size: 24px; }
+          .about-history > ul > li > ul li div p {
+            margin-right: 20px; }
+      .about-history > ul > li:nth-of-type(2) {
+        transform: none; } }
+
+@media screen and (max-width: 539px) {
+  .about-identity > .text p {
+    font-size: 14px; }
+  .about-history > ul {
+    width: 100%; }
+    .about-history > ul > li {
+      width: 100%; }
+      .about-history > ul > li > p {
+        display: inline-block;
+        width: 100%; }
+      .about-history > ul > li > ul li {
+        display: flex;
+        flex-direction: column; }
+        .about-history > ul > li > ul li div {
+          width: 100%; }
+          .about-history > ul > li > ul li div strong {
+            order: 0;
+            margin: 0;
+            margin-right: 10px;
+            font-size: 18px; }
+          .about-history > ul > li > ul li div p {
+            font-size: 14px; }
+      .about-history > ul > li:nth-of-type(2) {
+        transform: none; } }
+
 .faq-board {
   width: 100%; }
   .faq-board table {
@@ -1005,44 +1097,6 @@ main {
       .faq-board table tr td {
         border-bottom: 1px solid #333;
         padding: 10px; }
-
-.btnIcons {
-  width: 100%;
-  position: absolute;
-  top: 200px;
-  right: 0; }
-  .btnIcons article {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; }
-    .btnIcons article input {
-      position: absolute;
-      top: -9px;
-      right: 22px;
-      width: 40px;
-      height: 40px;
-      padding: 0 10px;
-      transition: 0.5s;
-      border: none;
-      border-radius: 4px; }
-      .btnIcons article input:focus, .btnIcons article input:active {
-        outline: none; }
-      .btnIcons article input::placeholder {
-        color: #fff; }
-      .btnIcons article input.on {
-        width: 200px;
-        border: 1px solid #333;
-        transition: 0.5s; }
-        .btnIcons article input.on::placeholder {
-          color: #333; }
-    .btnIcons article i {
-      font-size: 22px;
-      margin: 0 30px;
-      cursor: pointer;
-      transition: color 0.4s;
-      z-index: 2; }
-      .btnIcons article i:hover {
-        color: #777; }
 
 .pagination {
   display: flex;
@@ -1086,71 +1140,111 @@ main {
         height: 100%;
         transform: translateY(1px); }
 
-.join .join-terms {
+@media screen and (max-width: 1179px) {
+  .faq-board table tr td {
+    font-size: 14px; }
+  .faq-board table tr th:nth-of-type(1),
+  .faq-board table tr td:nth-of-type(1) {
+    display: none; }
+  .pagination {
+    width: 100%;
+    margin-top: 20px; }
+    .pagination > a {
+      display: block;
+      width: 30px;
+      height: 30px; }
+    .pagination ul li {
+      width: 20px;
+      height: 30px;
+      line-height: 30px; } }
+
+@media screen and (max-width: 539px) {
+  .faq-board table tr td {
+    font-size: 14px; }
+    .faq-board table tr td:nth-of-type(2) {
+      width: 10%; }
+    .faq-board table tr td:nth-of-type(3) {
+      width: 90%; }
+  .faq-board table tr th:nth-of-type(4),
+  .faq-board table tr td:nth-of-type(4) {
+    display: none; }
+  .pagination {
+    width: 100%; }
+    .pagination > a:hover {
+      background-color: #333;
+      color: #fff; }
+    .pagination ul {
+      display: none; } }
+
+.joinPage .inner .join .join-terms {
   margin-bottom: 100px; }
-  .join .join-terms textarea {
+  .joinPage .inner .join .join-terms textarea {
     width: 100%;
     height: 150px;
     resize: none;
     padding: 20px;
     border: 1px solid #dcdcdc;
     margin-bottom: 20px; }
-  .join .join-terms .checkbox {
+  .joinPage .inner .join .join-terms .checkbox {
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end; }
-    .join .join-terms .checkbox input {
+    .joinPage .inner .join .join-terms .checkbox input {
       margin-right: 20px;
       width: 20px;
       height: 20px; }
-    .join .join-terms .checkbox label {
+    .joinPage .inner .join .join-terms .checkbox label {
       font-size: 18px; }
 
-.join .join-info .con-title::before {
+.joinPage .inner .join .join-info .con-title::before {
   width: 70%; }
 
-.join .join-info fieldset {
+.joinPage .inner .join .join-info fieldset {
   border: none; }
 
-.join .join-info table {
+.joinPage .inner .join .join-info table {
   width: 100%; }
-  .join .join-info table tr th {
+  .joinPage .inner .join .join-info table tr th {
     width: 30%;
     text-transform: uppercase;
     padding: 20px; }
-  .join .join-info table tr td [type="text"],
-  .join .join-info table tr td [type="password"] {
+  .joinPage .inner .join .join-info table tr td.funnels {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px; }
+  .joinPage .inner .join .join-info table tr td [type="text"],
+  .joinPage .inner .join .join-info table tr td [type="password"] {
     padding: 20px 10px;
     width: 100%;
     border: none;
     border-bottom: 1px solid #dcdcdc; }
-  .join .join-info table tr td [type="date"] {
+  .joinPage .inner .join .join-info table tr td [type="date"] {
     width: 40%;
     padding: 10px;
     border: none;
     border-bottom: 1px solid #dcdcdc; }
-  .join .join-info table tr td input {
+  .joinPage .inner .join .join-info table tr td input {
     margin-left: 20px; }
-  .join .join-info table tr td label {
+  .joinPage .inner .join .join-info table tr td label {
     text-transform: uppercase;
     margin-left: 20px; }
-  .join .join-info table tr td textarea {
+  .joinPage .inner .join .join-info table tr td textarea {
     width: 100%;
     height: 60px;
     padding: 20px;
     resize: none;
     border: none;
     border-bottom: 1px solid #dcdcdc; }
-  .join .join-info table tr td input:active, .join .join-info table tr td input:focus,
-  .join .join-info table tr td textarea:active,
-  .join .join-info table tr td textarea:focus {
+  .joinPage .inner .join .join-info table tr td input:active, .joinPage .inner .join .join-info table tr td input:focus,
+  .joinPage .inner .join .join-info table tr td textarea:active,
+  .joinPage .inner .join .join-info table tr td textarea:focus {
     outline: none; }
-  .join .join-info table tr:last-child td {
+  .joinPage .inner .join .join-info table tr:last-child td {
     width: 100%;
     padding: 20px;
     text-align: center; }
-    .join .join-info table tr:last-child td input {
+    .joinPage .inner .join .join-info table tr:last-child td input {
       margin-top: 30px;
       margin-right: 20px;
       width: 150px;
@@ -1161,14 +1255,54 @@ main {
       text-transform: uppercase;
       font-size: 16px;
       cursor: pointer; }
-      .join .join-info table tr:last-child td input:last-of-type {
+      .joinPage .inner .join .join-info table tr:last-child td input:last-of-type {
         background-color: #333;
         color: #fff; }
-  .join .join-info table tr p {
+  .joinPage .inner .join .join-info table tr p {
     color: #ff6666;
     font-size: 14px;
     margin-top: 10px;
     margin-left: 20px; }
+
+@media screen and (max-width: 1179px) {
+  .joinPage .inner .join .join-terms {
+    margin-bottom: 70px; }
+    .joinPage .inner .join .join-terms .checkbox input {
+      margin-right: 10px;
+      width: 15px;
+      height: 15px; }
+    .joinPage .inner .join .join-terms .checkbox label {
+      font-size: 16px; }
+  .joinPage .inner .join .join-info .con-title::before {
+    width: 40%; }
+  .joinPage .inner .join .join-info table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; }
+    .joinPage .inner .join .join-info table tr th {
+      text-align: left; } }
+
+@media screen and (max-width: 539px) {
+  .joinPage .inner .join .join-terms .checkbox label {
+    font-size: 14px; }
+  .joinPage .inner .join .join-info table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; }
+    .joinPage .inner .join .join-info table tr th {
+      text-align: left; }
+    .joinPage .inner .join .join-info table tr td [type="date"] {
+      width: 100%; }
+    .joinPage .inner .join .join-info table tr td.funnels {
+      display: block;
+      padding: 0; }
+      .joinPage .inner .join .join-info table tr td.funnels div {
+        display: flex;
+        margin-bottom: 10px; }
+    .joinPage .inner .join .join-info table tr td [for="sns"],
+    .joinPage .inner .join .join-info table tr td [for="search"],
+    .joinPage .inner .join .join-info table tr td [for="etc"] {
+      display: block; } }
 
 .member {
   width: 360px;
@@ -1195,6 +1329,23 @@ main {
     font-style: normal;
     font-size: 18px;
     line-height: 1.5; }
+
+@media screen and (max-width: 1179px) {
+  .member {
+    width: calc(100% / 2 - 10px);
+    margin-right: 0px; }
+    .member:nth-of-type(odd) {
+      margin-right: 20px; }
+    .member img {
+      width: 100%; }
+    .member address {
+      font-size: 14px; } }
+
+@media screen and (max-width: 539px) {
+  .member {
+    width: 100%; }
+    .member:nth-of-type(odd) {
+      margin-right: 0px; } }
 
 .video-content.con {
   width: 100%; }
@@ -1476,6 +1627,10 @@ figure.pop {
       color: #fff;
       font-size: 32px; }
 
+@media screen and (max-width: 1179px) {
+  .gallery .inner {
+    width: 100%; } }
+
 @media screen and (max-width: 800px) {
   .gallery .inner .img-list li {
     width: calc(100% / 3); }
@@ -1616,7 +1771,7 @@ footer {
     header .inner h1 a p {
       font-size: 32px; }
     header .inner .gnb > ul > li {
-      padding: 0 60px 30px; }
+      padding: 0 60px 40px; }
       header .inner .gnb > ul > li a h2 {
         font-size: 18px; }
     header .inner .btn-menu {
@@ -1710,43 +1865,7 @@ footer {
   .content .inner .title p {
     font-size: 16px; }
   .content .inner .con .con-title {
-    font-size: 24px; }
-  .content .inner .con .about-identity > .title {
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 14px; }
-  .content .inner .con .about-identity > .text {
-    width: 100%; }
-  .content .inner .con .about-identity > .img img {
-    height: 200px; }
-  .content .inner .con .about-history > ul > li p {
-    font-size: 24px; }
-  .content .inner .con .about-history > ul > li > ul li div strong {
-    font-size: 16px; }
-  .content .inner .con .about-history > ul > li > ul li div p {
-    font-size: 14px; }
-  .content .inner .con .about-history > ul > li:nth-of-type(2) {
-    transform: none; }
-  .content .inner .con .member {
-    width: 100%;
-    margin-right: 0; }
-    .content .inner .con .member img {
-      height: 300px; }
-    .content .inner .con .member address {
-      font-size: 15px; }
-  .content .inner .faq-board table tr td:nth-of-type(3) {
-    width: 100%;
-    font-size: 15px; }
-  .content .inner .faq-board table tr th:nth-of-type(4),
-  .content .inner .faq-board table tr td:nth-of-type(4) {
-    display: none; }
-  .content .inner .pagination {
-    width: 100%; }
-    .content .inner .pagination > a:hover {
-      background-color: #333;
-      color: #fff; }
-    .content .inner .pagination ul {
-      display: none; } }
+    font-size: 24px; } }
 
 * {
   margin: 0;
