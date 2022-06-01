@@ -352,88 +352,6 @@ main {
       }
     }
 
-    &.main-faq {
-      height: 50vh;
-      .inner {
-        width: 1180px;
-        margin: 0 auto;
-
-        .title {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 20px;
-
-          h1 {
-            font-size: 42px;
-          }
-
-          a {
-            width: 100px;
-            height: 40px;
-            border: $border;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
-            line-height: 40px;
-            position: relative;
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 0;
-              height: 100%;
-              background-color: #333;
-              transition: 0.4s;
-              color: #fff;
-            }
-
-            &:hover {
-              color: #fff;
-              &::after {
-                content: "Click!";
-                width: 100%;
-                text-align: center;
-                color: #fff;
-              }
-            }
-          }
-        }
-
-        table {
-          width: 100%;
-          border-collapse: collapse;
-
-          tr {
-            height: 60px;
-
-            th,
-            td {
-              border-bottom: 1px solid #333;
-              padding: 10px;
-            }
-
-            td {
-              &:nth-of-type(2) {
-                text-align: center;
-              }
-            }
-
-            &:hover {
-              td {
-                background-color: #333;
-                a {
-                  color: #fff;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
     &.location {
       width: 100%;
       height: 80vh;
@@ -451,7 +369,7 @@ main {
 
         h1 {
           height: 60%;
-          font-size: 72px;
+          font-size: 3vw;
           font-weight: bold;
           text-transform: uppercase;
           padding: 50px 40px;
@@ -742,6 +660,89 @@ main {
           }
         }
       }
+
+      &.location {
+        width: 100%;
+        height: 80vh;
+
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        .location-tab {
+          float: left;
+          width: 30%;
+          height: 100%;
+
+          h1 {
+            height: 60%;
+            font-size: 3vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 50px 40px;
+          }
+
+          ul {
+            height: 40%;
+
+            li {
+              width: 100%;
+              height: calc(100% / 3);
+              border-top: $border;
+              padding: 0 20px;
+
+              a {
+                padding: 0;
+                height: 100%;
+                padding: 40px 0;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+                display: block;
+              }
+
+              &.on {
+                background-color: #333;
+                a {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        .location-map {
+          float: right;
+          width: 70%;
+          height: 80vh;
+          border-left: $border;
+
+          .location-map-list {
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            position: relative;
+
+            li {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              background-color: blue;
+              z-index: 1;
+              opacity: 0;
+
+              &.on {
+                z-index: 3;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -765,20 +766,36 @@ main {
 
           .wrap {
             margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+
             article {
-              width: calc(100% / 3 - 15px);
+              width: 100%;
+              margin-bottom: 20px;
+
+              .img {
+                width: 100%;
+                height: 100px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
 
               .text {
                 h2 {
-                  font-size: 22px;
+                  font-size: 18px;
                 }
 
                 p {
-                  font-size: 16px;
+                  font-size: 12px;
+                  margin-bottom: 10px;
                 }
 
                 a {
-                  width: 120px;
+                  width: 100px;
+                  font-size: 12px;
 
                   &:hover {
                     background-color: #333;
@@ -816,29 +833,17 @@ main {
         }
 
         .btns {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100vw;
+          top: 50px;
+          transform: none;
 
           button {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background-color: transparent;
-            border: 1px solid #fff;
-            outline: none;
-            border-radius: 50%;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
 
             &.prev {
-              left: 50px;
-            }
-
-            &.next {
-              right: 50px;
+              left: 50%;
+              transform: translateX(-50%);
             }
           }
         }
@@ -853,17 +858,6 @@ main {
               font-size: 26px;
             }
           }
-        }
-      }
-
-      &.review {
-        width: 100%;
-        height: 200vh;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
         }
       }
 
@@ -882,32 +876,6 @@ main {
           h1 {
             font-size: 52px;
             text-align: center;
-          }
-        }
-      }
-
-      &.main-faq {
-        .inner {
-          width: 100%;
-          padding: 0 40px;
-
-          table {
-            width: 100%;
-
-            border-collapse: collapse;
-
-            tr {
-              th {
-                font-size: 24px;
-              }
-
-              th,
-              td {
-                &:nth-of-type(2) {
-                  display: none;
-                }
-              }
-            }
           }
         }
       }

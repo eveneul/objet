@@ -380,59 +380,6 @@ main {
           text-transform: uppercase;
           color: #333;
           border-radius: 100px; }
-    main section.main-faq {
-      height: 50vh; }
-      main section.main-faq .inner {
-        width: 1180px;
-        margin: 0 auto; }
-        main section.main-faq .inner .title {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 20px; }
-          main section.main-faq .inner .title h1 {
-            font-size: 42px; }
-          main section.main-faq .inner .title a {
-            width: 100px;
-            height: 40px;
-            border: 1px solid #333;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
-            line-height: 40px;
-            position: relative; }
-            main section.main-faq .inner .title a::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 0;
-              height: 100%;
-              background-color: #333;
-              transition: 0.4s;
-              color: #fff; }
-            main section.main-faq .inner .title a:hover {
-              color: #fff; }
-              main section.main-faq .inner .title a:hover::after {
-                content: "Click!";
-                width: 100%;
-                text-align: center;
-                color: #fff; }
-        main section.main-faq .inner table {
-          width: 100%;
-          border-collapse: collapse; }
-          main section.main-faq .inner table tr {
-            height: 60px; }
-            main section.main-faq .inner table tr th,
-            main section.main-faq .inner table tr td {
-              border-bottom: 1px solid #333;
-              padding: 10px; }
-            main section.main-faq .inner table tr td:nth-of-type(2) {
-              text-align: center; }
-            main section.main-faq .inner table tr:hover td {
-              background-color: #333; }
-              main section.main-faq .inner table tr:hover td a {
-                color: #fff; }
     main section.location {
       width: 100%;
       height: 80vh; }
@@ -446,7 +393,7 @@ main {
         height: 100%; }
         main section.location .location-tab h1 {
           height: 60%;
-          font-size: 72px;
+          font-size: 3vw;
           font-weight: bold;
           text-transform: uppercase;
           padding: 50px 40px; }
@@ -639,7 +586,65 @@ main {
           align-items: center; }
           main section.main-join .inner h1 {
             font-size: 52px;
-            text-align: center; } }
+            text-align: center; }
+      main section.location {
+        width: 100%;
+        height: 80vh; }
+        main section.location::after {
+          content: "";
+          display: block;
+          clear: both; }
+        main section.location .location-tab {
+          float: left;
+          width: 30%;
+          height: 100%; }
+          main section.location .location-tab h1 {
+            height: 60%;
+            font-size: 3vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 50px 40px; }
+          main section.location .location-tab ul {
+            height: 40%; }
+            main section.location .location-tab ul li {
+              width: 100%;
+              height: calc(100% / 3);
+              border-top: 1px solid #333;
+              padding: 0 20px; }
+              main section.location .location-tab ul li a {
+                padding: 0;
+                height: 100%;
+                padding: 40px 0;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+                display: block; }
+              main section.location .location-tab ul li.on {
+                background-color: #333; }
+                main section.location .location-tab ul li.on a {
+                  color: #fff; }
+        main section.location .location-map {
+          float: right;
+          width: 70%;
+          height: 80vh;
+          border-left: 1px solid #333; }
+          main section.location .location-map .location-map-list {
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            position: relative; }
+            main section.location .location-map .location-map-list li {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              background-color: blue;
+              z-index: 1;
+              opacity: 0; }
+              main section.location .location-map .location-map-list li.on {
+                z-index: 3;
+                opacity: 1; } }
 
 @media screen and (max-width: 539px) {
   main {
@@ -653,15 +658,26 @@ main {
         main section.newArrival .inner > h1 {
           font-size: 32px; }
         main section.newArrival .inner .wrap {
-          margin-top: 100px; }
+          margin-top: 100px;
+          display: flex;
+          flex-direction: column; }
           main section.newArrival .inner .wrap article {
-            width: calc(100% / 3 - 15px); }
+            width: 100%;
+            margin-bottom: 20px; }
+            main section.newArrival .inner .wrap article .img {
+              width: 100%;
+              height: 100px; }
+              main section.newArrival .inner .wrap article .img img {
+                width: 100%;
+                height: 100%; }
             main section.newArrival .inner .wrap article .text h2 {
-              font-size: 22px; }
+              font-size: 18px; }
             main section.newArrival .inner .wrap article .text p {
-              font-size: 16px; }
+              font-size: 12px;
+              margin-bottom: 10px; }
             main section.newArrival .inner .wrap article .text a {
-              width: 120px; }
+              width: 100px;
+              font-size: 12px; }
               main section.newArrival .inner .wrap article .text a:hover {
                 background-color: #333;
                 color: #fff; }
@@ -683,36 +699,19 @@ main {
             object-fit: cover;
             filter: saturate(0); }
         main section.mainGallery .btns {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100vw; }
+          top: 50px;
+          transform: none; }
           main section.mainGallery .btns button {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background-color: transparent;
-            border: 1px solid #fff;
-            outline: none;
-            border-radius: 50%;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer; }
+            width: 50px;
+            height: 50px;
+            font-size: 20px; }
             main section.mainGallery .btns button.prev {
-              left: 50px; }
-            main section.mainGallery .btns button.next {
-              right: 50px; }
+              left: 50%;
+              transform: translateX(-50%); }
       main section.category .inner {
         width: 100%; }
         main section.category .inner a .text {
           font-size: 26px; }
-      main section.review {
-        width: 100%;
-        height: 200vh; }
-        main section.review img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
       main section.main-join {
         height: 100vh; }
         main section.main-join .inner {
@@ -726,18 +725,7 @@ main {
           align-items: center; }
           main section.main-join .inner h1 {
             font-size: 52px;
-            text-align: center; }
-      main section.main-faq .inner {
-        width: 100%;
-        padding: 0 40px; }
-        main section.main-faq .inner table {
-          width: 100%;
-          border-collapse: collapse; }
-          main section.main-faq .inner table tr th {
-            font-size: 24px; }
-          main section.main-faq .inner table tr th:nth-of-type(2),
-          main section.main-faq .inner table tr td:nth-of-type(2) {
-            display: none; } }
+            text-align: center; } }
 
 #cookie {
   width: 100%;
