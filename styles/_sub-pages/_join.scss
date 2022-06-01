@@ -1,125 +1,227 @@
-.join {
-  .join-terms {
-    margin-bottom: 100px;
-    textarea {
-      width: 100%;
-      height: 150px;
-      resize: none;
-      padding: 20px;
-      border: 1px solid #dcdcdc;
-      margin-bottom: 20px;
-    }
-
-    .checkbox {
-      text-align: right;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      input {
-        margin-right: 20px;
-        width: 20px;
-        height: 20px;
-      }
-      label {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .join-info {
-    .con-title {
-      &::before {
-        width: 70%;
-      }
-    }
-
-    fieldset {
-      border: none;
-    }
-
-    table {
-      width: 100%;
-
-      tr {
-        th {
-          width: 30%;
-          text-transform: uppercase;
+.joinPage {
+  .inner {
+    .join {
+      .join-terms {
+        margin-bottom: 100px;
+        textarea {
+          width: 100%;
+          height: 150px;
+          resize: none;
           padding: 20px;
+          border: 1px solid #dcdcdc;
+          margin-bottom: 20px;
         }
 
-        td {
-          [type="text"],
-          [type="password"] {
-            padding: 20px 10px;
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid #dcdcdc;
-          }
-
-          [type="date"] {
-            width: 40%;
-            padding: 10px;
-            border: none;
-            border-bottom: 1px solid #dcdcdc;
-          }
-
+        .checkbox {
+          text-align: right;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
           input {
-            margin-left: 20px;
+            margin-right: 20px;
+            width: 20px;
+            height: 20px;
           }
-
           label {
-            text-transform: uppercase;
-            margin-left: 20px;
+            font-size: 18px;
           }
+        }
+      }
 
-          textarea {
-            width: 100%;
-            height: 60px;
-            padding: 20px;
-            resize: none;
-            border: none;
-            border-bottom: 1px solid #dcdcdc;
+      .join-info {
+        .con-title {
+          &::before {
+            width: 70%;
           }
+        }
 
-          input,
-          textarea {
-            &:active,
-            &:focus {
-              outline: none;
+        fieldset {
+          border: none;
+        }
+
+        table {
+          width: 100%;
+
+          tr {
+            th {
+              width: 30%;
+              text-transform: uppercase;
+              padding: 20px;
+            }
+
+            td {
+              &.funnels {
+                display: flex;
+                align-items: center;
+                padding: 20px 0px;
+              }
+
+              [type="text"],
+              [type="password"] {
+                padding: 20px 10px;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #dcdcdc;
+              }
+
+              [type="date"] {
+                width: 40%;
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid #dcdcdc;
+              }
+
+              input {
+                margin-left: 20px;
+              }
+
+              label {
+                text-transform: uppercase;
+                margin-left: 20px;
+              }
+
+              textarea {
+                width: 100%;
+                height: 60px;
+                padding: 20px;
+                resize: none;
+                border: none;
+                border-bottom: 1px solid #dcdcdc;
+              }
+
+              input,
+              textarea {
+                &:active,
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+            &:last-child {
+              td {
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+
+                input {
+                  margin-top: 30px;
+                  margin-right: 20px;
+                  width: 150px;
+                  height: 40px;
+                  border: $border;
+                  background-color: #fff;
+                  line-height: 40px;
+                  text-transform: uppercase;
+                  font-size: 16px;
+                  cursor: pointer;
+
+                  &:last-of-type {
+                    background-color: #333;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+
+            p {
+              color: #ff6666;
+              font-size: 14px;
+              margin-top: 10px;
+              margin-left: 20px;
             }
           }
         }
-        &:last-child {
-          td {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: $tablet) {
+  .joinPage {
+    .inner {
+      .join {
+        .join-terms {
+          margin-bottom: 70px;
+
+          .checkbox {
             input {
-              margin-top: 30px;
-              margin-right: 20px;
-              width: 150px;
-              height: 40px;
-              border: $border;
-              background-color: #fff;
-              line-height: 40px;
-              text-transform: uppercase;
+              margin-right: 10px;
+              width: 15px;
+              height: 15px;
+            }
+            label {
               font-size: 16px;
-              cursor: pointer;
+            }
+          }
+        }
 
-              &:last-of-type {
-                background-color: #333;
-                color: #fff;
+        .join-info {
+          .con-title {
+            &::before {
+              width: 40%;
+            }
+          }
+
+          table {
+            tr {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 30px;
+              th {
+                text-align: left;
               }
             }
           }
         }
+      }
+    }
+  }
+}
 
-        p {
-          color: #ff6666;
-          font-size: 14px;
-          margin-top: 10px;
-          margin-left: 20px;
+@media screen and (max-width: $mobile) {
+  .joinPage {
+    .inner {
+      .join {
+        .join-terms {
+          .checkbox {
+            label {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .join-info {
+          table {
+            tr {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 30px;
+              th {
+                text-align: left;
+              }
+
+              td {
+                [type="date"] {
+                  width: 100%;
+                }
+
+                &.funnels {
+                  display: block;
+                  padding: 0;
+                  div {
+                    display: flex;
+                    margin-bottom: 10px;
+                  }
+                }
+
+                [for="sns"],
+                [for="search"],
+                [for="etc"] {
+                  display: block;
+                }
+              }
+            }
+          }
         }
       }
     }
