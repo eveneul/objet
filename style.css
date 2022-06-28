@@ -253,31 +253,31 @@ main {
                   color: #fff; }
                 main section.newArrival .inner .wrap article .text a:active {
                   transform: scale(0.98); }
-    main section.mainGallery {
+    main section.mySwiper {
       width: 100%;
       height: 100vh;
       overflow: hidden;
       position: relative; }
-      main section.mainGallery .inner .images {
+      main section.mySwiper .swiper-wrapper .swiper-slide {
         width: 100%;
         height: 100vh;
         position: absolute;
         top: 0; }
-        main section.mainGallery .inner .images::after {
-          content: "";
+        main section.mySwiper .swiper-wrapper .swiper-slide::after {
+          content: '';
           display: block;
           clear: both; }
-        main section.mainGallery .inner .images img {
+        main section.mySwiper .swiper-wrapper .swiper-slide img {
           float: left;
           width: 100vw;
           height: 100%;
           object-fit: cover;
           filter: saturate(0); }
-      main section.mainGallery .btns {
+      main section.mySwiper .btns {
         position: absolute;
         top: 100px;
         right: 50px; }
-        main section.mainGallery .btns button {
+        main section.mySwiper .btns button {
           width: 80px;
           height: 80px;
           background-color: transparent;
@@ -287,7 +287,7 @@ main {
           font-size: 30px;
           color: #fff;
           cursor: pointer; }
-        main section.mainGallery .btns .prev {
+        main section.mySwiper .btns .prev {
           margin-right: 50px; }
     main section.category {
       width: 100%;
@@ -384,7 +384,7 @@ main {
       width: 100%;
       height: 80vh; }
       main section.location::after {
-        content: "";
+        content: '';
         display: block;
         clear: both; }
       main section.location .location-tab {
@@ -555,7 +555,7 @@ main {
           width: 100%;
           height: 100vh; }
           main section.mainGallery .images::after {
-            content: "";
+            content: '';
             display: block;
             clear: both; }
           main section.mainGallery .images img {
@@ -591,7 +591,7 @@ main {
         width: 100%;
         height: 80vh; }
         main section.location::after {
-          content: "";
+          content: '';
           display: block;
           clear: both; }
         main section.location .location-tab {
@@ -689,7 +689,7 @@ main {
           width: 100%;
           height: 100vh; }
           main section.mainGallery .images::after {
-            content: "";
+            content: '';
             display: block;
             clear: both; }
           main section.mainGallery .images img {
